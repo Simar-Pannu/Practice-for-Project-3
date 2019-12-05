@@ -1,0 +1,4 @@
+namespace HighStakes.Domain.Models
+{
+    
+}
