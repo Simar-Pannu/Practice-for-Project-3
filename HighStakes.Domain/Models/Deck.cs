@@ -19,10 +19,10 @@ namespace HighStakes.Domain.Models
 
             for (int i = 0; i < 13; i++) 
             {
-                DCard club = new DCard();
-                DCard heart = new DCard();
-                DCard spade = new DCard();
-                DCard diamond = new DCard();
+                DCard club = new DCard(0, 0, "");
+                DCard heart = new DCard(0, 0, "");
+                DCard spade = new DCard(0, 0, "");
+                DCard diamond = new DCard(0, 0, "");
                 if (i == 0)
                 {
                     club.Initialize(2, "Club", "Two of Clubs");
