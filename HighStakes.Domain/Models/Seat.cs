@@ -51,5 +51,35 @@ namespace HighStakes.Domain.Models
         {
             return IsPair(hand) && IsThreeOfAKind(hand);
         }
+
+        public bool IsStraight(List<Card> hand)
+        {
+            List<Card> orderedHand = hand.OrderBy(h => h.Value).ToList();
+            int curVal = 0;
+            foreach(Card card in orderedHand)
+            {
+                if (curVal == 0)
+                {
+                    curVal = card.Value;
+                } else {
+                    if (curVal != card.Value - 1)
+                    {
+                        return false;
+                    }
+                    curVal++;
+                }
+            }
+            return true;
+        }    
+
+        public bool IsStraightFlush(List<Card> hand)
+        {
+            return IsStraight(hand) && IsFlush(hand);
+        }
+
+        public bool IsRoyalStraightFlush(List<Card> hand)
+        {
+            return IsStraightFlush(hand) && hand.Exists(c => c.Value == 14);
+        }
     }
 }
