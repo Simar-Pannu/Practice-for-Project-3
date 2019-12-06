@@ -26,5 +26,30 @@ namespace HighStakes.Domain.Models
         {
             return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 1;
         }
+
+        public bool IsTwoPair(List<Card> hand)
+        {
+            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 2;
+        }
+
+        public bool IsThreeOfAKind(List<Card> hand)
+        {
+            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 3).Any();
+        }
+
+        public bool IsFourOfAKind(List<Card> hand)
+        {
+            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 4).Any();
+        }
+
+        public bool IsFlush(List<Card> hand)
+        {
+            return hand.GroupBy(h => h.Suit).Where(g => g.Count() == 5).Any();
+        }
+
+        public bool IsFullHouse(List<Card> hand)
+        {
+            return IsPair(hand) && IsThreeOfAKind(hand);
+        }
     }
 }
