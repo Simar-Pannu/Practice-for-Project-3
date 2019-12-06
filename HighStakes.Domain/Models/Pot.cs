@@ -1,7 +1,7 @@
 namespace HighStakes.Domain.Models
 {
-    public class Pot
+    public class DPot
     {
-        public int MyProperty { get; set; }
+        public int PotId { get; set; }
     }
 }

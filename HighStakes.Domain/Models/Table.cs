@@ -1,13 +1,13 @@
 using System.Collections.Generic;
+using HighStakes.Domain.Abstracts;
 
 namespace HighStakes.Domain.Models
 {
-    public class Table
+    public class DTable : AGame
     {
         public int TableId { get; set; }
-        public List<Seat> Seats { get; set; }
-        public Deck DeckOfCards { get; set; }
-        public List<Card> ActiveCards { get; set; }
-        public List<Pot> Pots { get; set; }
+        public List<DSeat> Seats { get; set; }
+        public DDeck DeckOfCards { get; set; }
+        public List<DPot> Pots { get; set; }
     }
 }
