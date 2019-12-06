@@ -22,6 +22,52 @@ namespace HighStakes.Domain.Models
             PlayerHand.Initialize();
         }
 
+        public IEnumerable<DCard[]> Combinations(int m, int n)
+        {
+                DCard[] result = new DCard[m];
+                Stack<DCard> stack = new Stack<DCard>();
+                stack.Push(new DCard(0,0,""));
+    
+            while (stack.Count > 0)
+            {
+                    int index = stack.Count - 1;
+                    DCard value = stack.Pop();
+    
+                while (value < n) 
+                {
+                    result[index++] = ++value;
+                    stack.Push(value);
+
+                    if (index == m) 
+                    {
+                        yield return result;
+                        break;
+                    }
+                 }
+            }
+        }
+
+        // public void FindBestHand()
+        // {
+        //     List<DCard> AllCards = new List<DCard>();
+        //     foreach(DCard card in Flop)
+        //     {
+        //         AllCards.Add(card);
+        //     }
+        //     foreach(DCard card in Pocket)
+        //     {
+        //         AllCards.Add(card);
+        //     }
+        //     AllCards = AllCards.OrderBy(h => h.Value).ToList();
+
+        //     AllCards.   
+        // }
+
+        //public List<DCard> AllHandCombinations()
+        // {
+
+        // }
+
         public bool IsPair(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 1;
