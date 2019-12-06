@@ -3,21 +3,25 @@ using System.Collections.Generic;
 
 namespace HighStakes.Domain.Models
 {
-    public class Deck
+    public class DDeck
     {
         public int DeckId { get; set; }
-        public List<Card> Cards { get; set; }
+        public List<DCard> Cards { get; set; }
 
+        public DDeck(int deckId, List<DCard> cards)
+        {
+
+        }
         public void Initialize()
         {
-            Cards = new List<Card>();
+            Cards = new List<DCard>();
 
             for (int i = 0; i < 13; i++) 
             {
-                Card club = new Card();
-                Card heart = new Card();
-                Card spade = new Card();
-                Card diamond = new Card();
+                DCard club = new DCard();
+                DCard heart = new DCard();
+                DCard spade = new DCard();
+                DCard diamond = new DCard();
                 if (i == 0)
                 {
                     club.Initialize(2, "Club", "Two of Clubs");
@@ -113,15 +117,15 @@ namespace HighStakes.Domain.Models
             while (count > 1) {  
                 count--;  
                 int rand = rng.Next(count + 1);  
-                Card card = Cards[rand];  
+                DCard card = Cards[rand];  
                 Cards[rand] = Cards[count];  
                 Cards[count] = card;  
             }  
         }
 
-        public Card Draw()
+        public DCard Draw()
         {
-            Card draw = Cards[0];
+            DCard draw = Cards[0];
             Cards.RemoveAt(0);
             return draw;
         }

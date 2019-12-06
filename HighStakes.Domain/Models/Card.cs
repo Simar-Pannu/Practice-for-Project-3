@@ -1,6 +1,6 @@
 namespace HighStakes.Domain.Models
 {
-    public class Card
+    public class DCard
     {
         public int CardId { get; set; }
         public int Value { get; set; }

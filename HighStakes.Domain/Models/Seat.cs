@@ -4,59 +4,59 @@ using HighStakes.Domain.Abstracts;
 
 namespace HighStakes.Domain.Models
 {
-    public class Seat : AGame
+    public class DSeat : AGame
     {
         public int SeatId { get; set; }
-        public User Player { get; set; }
+        public DUser Player { get; set; }
         public int ChipTotal { get; set; }
-        public List<Card> Pocket { get; set; }
-        public Hand PlayerHand { get; set; }
+        public List<DCard> Pocket { get; set; }
+        public DHand PlayerHand { get; set; }
         public bool BigBlind { get; set; }
         public bool SmallBlind { get; set; }
 
         public void Initialize()
         {
-            Player = new User();
-            PlayerHand = new Hand();
-            Pocket = new List<Card>();
+            Player = new DUser();
+            PlayerHand = new DHand();
+            Pocket = new List<DCard>();
             PlayerHand.Initialize();
         }
 
-        public bool IsPair(List<Card> hand)
+        public bool IsPair(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 1;
         }
 
-        public bool IsTwoPair(List<Card> hand)
+        public bool IsTwoPair(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 2;
         }
 
-        public bool IsThreeOfAKind(List<Card> hand)
+        public bool IsThreeOfAKind(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Value).Where(g => g.Count() == 3).Any();
         }
 
-        public bool IsFourOfAKind(List<Card> hand)
+        public bool IsFourOfAKind(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Value).Where(g => g.Count() == 4).Any();
         }
 
-        public bool IsFlush(List<Card> hand)
+        public bool IsFlush(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Suit).Where(g => g.Count() == 5).Any();
         }
 
-        public bool IsFullHouse(List<Card> hand)
+        public bool IsFullHouse(List<DCard> hand)
         {
             return IsPair(hand) && IsThreeOfAKind(hand);
         }
 
-        public bool IsStraight(List<Card> hand)
+        public bool IsStraight(List<DCard> hand)
         {
-            List<Card> orderedHand = hand.OrderBy(h => h.Value).ToList();
+            List<DCard> orderedHand = hand.OrderBy(h => h.Value).ToList();
             int curVal = 0;
-            foreach(Card card in orderedHand)
+            foreach(DCard card in orderedHand)
             {
                 if (curVal == 0)
                 {
@@ -72,19 +72,19 @@ namespace HighStakes.Domain.Models
             return true;
         }    
 
-        public bool IsStraightFlush(List<Card> hand)
+        public bool IsStraightFlush(List<DCard> hand)
         {
             return IsStraight(hand) && IsFlush(hand);
         }
 
-        public bool IsRoyalStraightFlush(List<Card> hand)
+        public bool IsRoyalStraightFlush(List<DCard> hand)
         {
             return IsStraightFlush(hand) && hand.Exists(c => c.Value == 14);
         }
 
-        public void AssignHandValue(List<Card> hand)
+        public void AssignHandValue(List<DCard> hand)
         {
-            List<Card> orderedHand = hand.OrderByDescending(h => h.Value).ToList();
+            List<DCard> orderedHand = hand.OrderByDescending(h => h.Value).ToList();
             if (IsRoyalStraightFlush(hand))
             {
                 PlayerHand.HandValue = 900;
@@ -95,7 +95,7 @@ namespace HighStakes.Domain.Models
             } else if (IsFourOfAKind(hand))
             {
                 PlayerHand.HandValue = 700;
-                foreach(Card card in orderedHand)
+                foreach(DCard card in orderedHand)
                 {
                     PlayerHand.HandValue += card.Value;
                 }

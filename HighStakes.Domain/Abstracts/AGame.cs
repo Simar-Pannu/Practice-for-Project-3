@@ -5,6 +5,6 @@ namespace HighStakes.Domain.Abstracts
 {
     public abstract class AGame
     {
-        public List<Card> Flop { get; set; }
+        public List<DCard> Flop { get; set; }
     }
 }
