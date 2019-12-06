@@ -10,7 +10,8 @@ namespace HighStakes.Domain.Models
 
         public DDeck(int deckId, List<DCard> cards)
         {
-
+            DeckId = deckId;
+            Cards = cards;
         }
         public void Initialize()
         {

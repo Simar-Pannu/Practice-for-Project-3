@@ -7,6 +7,13 @@ namespace HighStakes.Domain.Models
         public string Suit { get; set; }
         public string Name { get; set; }
 
+        public DCard(int cardId, int value, string suit)
+        {
+            CardId = cardId;
+            Value = value;
+            Suit = suit;
+        }
+
         public void Initialize(int value, string suit, string name)
         {
             Value = value;
