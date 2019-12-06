@@ -81,5 +81,51 @@ namespace HighStakes.Domain.Models
         {
             return IsStraightFlush(hand) && hand.Exists(c => c.Value == 14);
         }
+
+        public void AssignHandValue(List<Card> hand)
+        {
+            List<Card> orderedHand = hand.OrderByDescending(h => h.Value).ToList();
+            if (IsRoyalStraightFlush(hand))
+            {
+                PlayerHand.HandValue = 900;
+            } else if (IsStraightFlush(hand))
+            {
+                PlayerHand.HandValue = 800;
+                PlayerHand.HandValue += orderedHand[0].Value;
+            } else if (IsFourOfAKind(hand))
+            {
+                PlayerHand.HandValue = 700;
+                foreach(Card card in orderedHand)
+                {
+                    PlayerHand.HandValue += card.Value;
+                }
+            } else if (IsFullHouse(hand))
+            {
+                PlayerHand.HandValue = 600;
+                PlayerHand.HandValue += orderedHand[2].Value;
+
+            } else if (IsFlush(hand))
+            {
+                PlayerHand.HandValue = 500;
+                PlayerHand.HandValue += orderedHand[0].Value;
+            } else if (IsStraight(hand))
+            {
+                PlayerHand.HandValue = 400;
+                PlayerHand.HandValue += orderedHand[0].Value;
+            } else if (IsThreeOfAKind(hand))
+            {
+                PlayerHand.HandValue = 300;
+                PlayerHand.HandValue += orderedHand[2].Value;
+            } else if (IsTwoPair(hand))
+            {
+                PlayerHand.HandValue = 200;
+            } else if (IsPair(hand))
+            {
+                PlayerHand.HandValue = 100;
+            } else 
+            {
+                PlayerHand.HandValue += orderedHand[0].Value;
+            }
+        }
     }
 }
