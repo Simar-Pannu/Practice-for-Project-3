@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using HighStakes.Domain.Abstracts;
 
 namespace HighStakes.Domain.Models
@@ -15,10 +16,15 @@ namespace HighStakes.Domain.Models
 
         public void Initialize()
         {
+            Player = new User();
+            PlayerHand = new Hand();
             Pocket = new List<Card>();
             PlayerHand.Initialize();
         }
 
-        
+        public bool IsPair(List<Card> hand)
+        {
+            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 1;
+        }
     }
 }
