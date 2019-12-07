@@ -28,6 +28,11 @@ namespace HighStakes.Client.Controllers
             return View("Table");
         }
 
+        public IActionResult Register()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

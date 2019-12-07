@@ -9,3 +9,23 @@ for details on configuring this project to bundle and minify static web assets. 
 td {
   text-align: center;
 }
+.whitefont {
+  color: white;
+}
+
+.speech {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 8px solid #666;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
