@@ -62,6 +62,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
             
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
@@ -76,6 +77,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
@@ -90,6 +92,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
@@ -104,6 +107,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
@@ -118,6 +122,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[3]);
@@ -132,6 +137,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[3]);
@@ -146,6 +152,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[3]);
@@ -160,6 +167,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[4]);
@@ -174,6 +182,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
@@ -188,6 +197,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
@@ -202,6 +212,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
@@ -216,6 +227,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[4]);
@@ -230,6 +242,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[0]);
             TempHand.Add(AllCards[3]);
             TempHand.Add(AllCards[4]);
@@ -244,6 +257,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
@@ -258,6 +272,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
@@ -272,6 +287,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
@@ -286,6 +302,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[4]);
@@ -300,6 +317,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[1]);
             TempHand.Add(AllCards[3]);
             TempHand.Add(AllCards[4]);
@@ -314,6 +332,7 @@ namespace HighStakes.Domain.Models
                 bestValue = tempValue;
             }
 
+            TempHand.Clear();
             TempHand.Add(AllCards[2]);
             TempHand.Add(AllCards[3]);
             TempHand.Add(AllCards[4]);
@@ -327,6 +346,8 @@ namespace HighStakes.Domain.Models
                 BestHand = TempHand;
                 bestValue = tempValue;
             }
+
+
         }
 
         //public List<DCard> AllHandCombinations()
