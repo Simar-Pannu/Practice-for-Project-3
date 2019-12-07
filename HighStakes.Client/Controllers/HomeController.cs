@@ -23,6 +23,11 @@ namespace HighStakes.Client.Controllers
             return View();
         }
 
+        public IActionResult Table()
+        {
+            return View("Table");
+        }
+
         public IActionResult Privacy()
         {
             return View();
