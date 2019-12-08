@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using HighStakes.Client.Models;
 using Newtonsoft.Json;
+// using HighStakes.Storing.Entities;
 
 namespace HighStakes.Client.Controllers
 {
@@ -48,8 +49,10 @@ namespace HighStakes.Client.Controllers
     {
       return View();
     }
-    public IActionResult Lobby()
+    [HttpPost()]
+    public IActionResult Lobby(Player p)
     {
+
       return View();
     }
 

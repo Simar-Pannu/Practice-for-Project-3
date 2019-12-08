@@ -2,8 +2,11 @@
 
 namespace HighStakes.Client.Models
 {
-  public class Player //: DUser
+  public class Player
   {
+    public string username { get; set; }
+    public string password { get; set; }
+    // public DUser UserInfo { get; set; }
     // public DHand PlayerHand { get; set; }
 
     // public DUser()

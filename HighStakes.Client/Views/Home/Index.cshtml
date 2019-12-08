@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HighStakes.Client.Models.Player
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -8,15 +10,15 @@
     <h1 class="display-4" style="color: White">Welcome to Highstakes</h1>
 </div>
 <div style="background-color:Tomato; margin-left: 60%; padding: 40px">
-<form>
+<form action="/home/lobby" method="post">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter username">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
