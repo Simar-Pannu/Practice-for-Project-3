@@ -19,6 +19,7 @@ namespace HighStakes.Domain.Models
             Player = new DUser();
             PlayerHand = new DHand();
             Pocket = new List<DCard>();
+            Flop = new List<DCard>();
             PlayerHand.Initialize();
         }
 
@@ -38,7 +39,7 @@ namespace HighStakes.Domain.Models
             {
                 AllCards.Add(card);
             }
-            AllCards = AllCards.OrderBy(h => h.Value).ToList();
+            AllCards = AllCards.OrderByDescending(h => h.Value).ToList();
 
             BestHand.Add(AllCards[0]);
             BestHand.Add(AllCards[1]);
@@ -58,7 +59,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
             
@@ -73,7 +74,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -88,7 +89,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -103,7 +104,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -118,7 +119,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -133,7 +134,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -148,7 +149,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -163,7 +164,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -178,7 +179,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -193,7 +194,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -208,7 +209,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -223,7 +224,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -238,7 +239,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -253,7 +254,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -268,7 +269,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -283,7 +284,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -298,7 +299,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -313,7 +314,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -328,7 +329,7 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
 
@@ -343,17 +344,12 @@ namespace HighStakes.Domain.Models
 
             if (tempValue > bestValue)
             {
-                BestHand = TempHand;
+                BestHand = new List<DCard>(TempHand);
                 bestValue = tempValue;
             }
-
-
+            AssignHandValue(BestHand);
+            PlayerHand.HandCards = new List<DCard>(BestHand);
         }
-
-        //public List<DCard> AllHandCombinations()
-        // {
-
-        // }
 
         public bool IsPair(List<DCard> hand)
         {
@@ -457,7 +453,7 @@ namespace HighStakes.Domain.Models
                 PlayerHand.HandValue = 100;
             } else 
             {
-                PlayerHand.HandValue += orderedHand[0].Value;
+                PlayerHand.HandValue = orderedHand[0].Value;
             }
         }
     }
