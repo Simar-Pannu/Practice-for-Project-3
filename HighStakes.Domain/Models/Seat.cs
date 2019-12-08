@@ -22,16 +22,18 @@ namespace HighStakes.Domain.Models
             Pocket = new List<DCard>();
             Flop = new List<DCard>();
             PlayerHand.Initialize();
+            Occupied = false;
         }
 
         public void Bid(DPot pot)
         {
-            
+
         }
 
-        public void SitDown()
+        public void SitDown(DUser player, int buyIn)
         {
-
+            Player = player;
+            ChipTotal = buyIn;
         }
 
         public void StandUp()

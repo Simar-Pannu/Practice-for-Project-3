@@ -25,9 +25,18 @@ namespace HighStakes.Domain.Models
             }
         }
 
-        public void JoinGame(DUser player)
+        public bool JoinGame(DUser player, int buyIn)
         {
-            
+            foreach(DSeat seat in Seats)
+            {
+                if (!seat.Occupied)
+                {
+                    player.ChipTotal -= buyIn;
+                    seat.SitDown(player, buyIn);
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void StartGame()
