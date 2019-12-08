@@ -13,6 +13,7 @@ namespace HighStakes.Domain.Models
         public DHand PlayerHand { get; set; }
         public bool BigBlind { get; set; }
         public bool SmallBlind { get; set; }
+        public bool Dealer { get; set; }
         public bool Occupied { get; set; }
 
         public void Initialize()
@@ -43,6 +44,13 @@ namespace HighStakes.Domain.Models
             Player = new DUser();
             ChipTotal = 0;
             Occupied = false;
+            PlayerHand = new DHand();
+            Pocket = new List<DCard>();
+            Flop = new List<DCard>();
+            PlayerHand.Initialize();
+            SmallBlind = false;
+            BigBlind = false;
+            Dealer = false;
         }
 
         public void FindBestHand()

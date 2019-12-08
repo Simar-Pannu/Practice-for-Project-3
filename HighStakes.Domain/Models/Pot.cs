@@ -6,6 +6,7 @@ namespace HighStakes.Domain.Models
     {
         public int PotId { get; set; }
         public List<DUser> PossibleWinners { get; set; }
+        public int PotValue { get; set; }
 
         public void Initialize()
         {
