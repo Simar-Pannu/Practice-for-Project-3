@@ -34,11 +34,15 @@ namespace HighStakes.Domain.Models
         {
             Player = player;
             ChipTotal = buyIn;
+            Occupied = true;
         }
 
         public void StandUp()
         {
-
+            Player.ChipTotal += ChipTotal;
+            Player = new DUser();
+            ChipTotal = 0;
+            Occupied = false;
         }
 
         public void FindBestHand()
