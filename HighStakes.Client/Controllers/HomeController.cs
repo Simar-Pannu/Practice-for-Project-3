@@ -50,10 +50,20 @@ namespace HighStakes.Client.Controllers
       return View();
     }
     [HttpPost()]
-    public IActionResult Lobby(Player p)
+    public IActionResult Lobby(Player player)
     {
+      HighStakesContext _hsc = new HighStakesContext();
+      Account account = _hsc.Accounts.FirstOrDefault(o => o.UserName == player.username && o.Password == player.password);
 
-      return View();
+      if (account == null)
+      {
+        return RedirectToAction("Index", "Home");
+      }
+      //populate domain user with info
+      User user = _hsc.Users.FirstOrDefault(o => o.AccountId == account.AccountId);
+      player.LoadUser(user);
+      return View("Lobby, player");
+
     }
 
     public IActionResult Payment()
