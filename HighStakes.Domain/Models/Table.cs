@@ -8,15 +8,19 @@ namespace HighStakes.Domain.Models
         public int TableId { get; set; }
         public List<DSeat> Seats { get; set; }
         public DDeck DeckOfCards { get; set; }
-        public DPot MainPot { get; set; }
+        public DPot CurrentPot { get; set; }
         public List<DPot> SidePots { get; set; }
+        public int SmallBlindAmount { get; set; }
+        public int BigBlindAmount { get; set; }
 
-        public void Initialize()
+        public void Initialize(int smallBlindAmount, int bigBlindAmount)
         {
             Seats = new List<DSeat>();
             DeckOfCards.Initialize();
             SidePots = new List<DPot>();
-            MainPot.Initialize();
+            CurrentPot.Initialize();
+            SmallBlindAmount = smallBlindAmount;
+            BigBlindAmount = bigBlindAmount;
             for (int i = 0; i < 6; i++)
             {
                 DSeat seat = new DSeat();
@@ -39,6 +43,17 @@ namespace HighStakes.Domain.Models
             return false;
         }
 
+        public int NumOfActivePlayers()
+        {
+            int NumberOfPlayers = 0;
+            foreach(DSeat seat in Seats)
+            {
+                if (seat.Occupied)
+                    NumberOfPlayers++;
+            }
+            return NumberOfPlayers;
+        }
+
         public bool StartGame()
         {
             int NumberOfPlayers = 0;
@@ -46,11 +61,9 @@ namespace HighStakes.Domain.Models
             bool AssignSmallBlind = false;
             bool AssignBigBlind = false;
             int i = 0;
-            foreach(DSeat seat in Seats)
-            {
-                if (seat.Occupied)
-                    NumberOfPlayers++;
-            }
+
+            NumberOfPlayers = NumOfActivePlayers();
+
             if (NumberOfPlayers >= 2)
             {
                 for (i = 0; i < 6; i++)
@@ -80,6 +93,32 @@ namespace HighStakes.Domain.Models
                 return true;
             }
             return false;
+        }
+    
+        public void RunGame()
+        {
+
+        }
+
+        public void StartRound()
+        {
+            int NumberOfPlayers = NumOfActivePlayers();
+            DeckOfCards.Initialize();
+
+            foreach (DSeat seat in Seats)
+            {
+                if (seat.SmallBlind)
+                {
+                    seat.Bid(SmallBlindAmount);
+                }
+                if (seat.BigBlind)
+                {
+                    seat.Bid(BigBlindAmount);
+                }
+            }
+
+            // going to need to set up pot to handle the side pots before can accept any bids, even small blind big blind
+
         }
     }
 }

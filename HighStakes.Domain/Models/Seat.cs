@@ -15,6 +15,8 @@ namespace HighStakes.Domain.Models
         public bool SmallBlind { get; set; }
         public bool Dealer { get; set; }
         public bool Occupied { get; set; }
+        public int RoundBid { get; set; }
+        public bool AllIn { get; set; }
 
         public void Initialize()
         {
@@ -24,11 +26,34 @@ namespace HighStakes.Domain.Models
             Flop = new List<DCard>();
             PlayerHand.Initialize();
             Occupied = false;
+            AllIn = false;
+            RoundBid = 0;
         }
 
-        public void Bid(DPot pot)
+        //public int Bid(int bid)
+        public void Bid(int bid)
         {
-
+            if (bid > ChipTotal)
+            {
+                RoundBid += ChipTotal;
+                ChipTotal = 0;
+                AllIn = true;
+            } else {
+                RoundBid += bid;
+                ChipTotal -= bid;
+            }
+            // //place bid
+            // int reducedBid = 0;
+            // if (bid > ChipTotal)
+            // {
+            //     reducedBid = ChipTotal;
+            //     ChipTotal = 0;
+            //     return reducedBid;
+            // } else {
+            //     ChipTotal -= bid;
+            // }
+            // // if out of money signal a new pot at end of round
+            // return bid;
         }
 
         public void SitDown(DUser player, int buyIn)
