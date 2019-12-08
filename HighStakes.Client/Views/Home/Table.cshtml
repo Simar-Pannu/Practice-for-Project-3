@@ -1,3 +1,5 @@
+@model HighStakes.Client.Models.Table
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -87,7 +89,7 @@
               <td>
                 <span id="player2">
                   <img src="/images/twobackcards.jpg" class="card-size">
-                  <div class="speech">cool</div>
+                  <div class="bubble">cool</div>
               </span>
               </td>
             </tr>
@@ -148,6 +150,9 @@
 </div>
 
 
+<h1 id="counter">@Model.Counter</h1>
+<button id="wow" class="btn btn-primary">Hey</button><br>
+<span id="cool" style="color: white;"></span>
 <style>
   body {
     background-image: url('/images/casino_table.jpg');
@@ -156,4 +161,7 @@
     height: 100;
   }
 </style>
+<script src="/js/table.js">
+
+</script>
 
