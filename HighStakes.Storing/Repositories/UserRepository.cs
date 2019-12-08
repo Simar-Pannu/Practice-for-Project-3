@@ -25,7 +25,7 @@ namespace HighStakes.Storing.Repositories
         foreach (var account in db.Accounts)
         {
          if(item.AccountId == account.AccountId){
-           _Users.Add(new DUser(item.UserId,))
+           _Users.Add(new DUser(item.UserId,item.FirstName, item.LastName, item.ChipTotal, new DAccount(account.AccountId, account.UserName, account.Password)));
          }  
         }
           
@@ -33,8 +33,8 @@ namespace HighStakes.Storing.Repositories
 
 
   }
+
+
 */
-
-
   }
 }
