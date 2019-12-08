@@ -48,6 +48,11 @@ namespace HighStakes.Client.Controllers
     {
       return View();
     }
+    public IActionResult Lobby()
+    {
+      return View();
+    }
+
     [HttpGet("{num}")]
     public Table Add(string num)
     {

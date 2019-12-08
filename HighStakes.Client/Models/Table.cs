@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace HighStakes.Client.Models
 {
@@ -8,6 +9,12 @@ namespace HighStakes.Client.Models
     public const int MAX_PLAYER = 8;
     public int Counter { get; set; }
 
-    
+    public List<Player> Players { get; set; }
+
+    public Table()
+    {
+      Players = new List<Player>();
+    }
+
   }
 }
