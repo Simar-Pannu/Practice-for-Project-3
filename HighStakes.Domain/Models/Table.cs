@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using HighStakes.Domain.Abstracts;
 
 namespace HighStakes.Domain.Models
@@ -12,6 +13,7 @@ namespace HighStakes.Domain.Models
         public List<DPot> SidePots { get; set; }
         public int SmallBlindAmount { get; set; }
         public int BigBlindAmount { get; set; }
+        public List<DSeat> SeatsInTurnOrder { get; set; }
 
         public void Initialize(int smallBlindAmount, int bigBlindAmount)
         {
@@ -19,6 +21,7 @@ namespace HighStakes.Domain.Models
             DeckOfCards.Initialize();
             SidePots = new List<DPot>();
             CurrentPot.Initialize();
+            SeatsInTurnOrder = new List<DSeat>();
             SmallBlindAmount = smallBlindAmount;
             BigBlindAmount = bigBlindAmount;
             for (int i = 0; i < 6; i++)
@@ -94,15 +97,97 @@ namespace HighStakes.Domain.Models
             }
             return false;
         }
-    
-        public void RunGame()
-        {
 
+        public void GetTurnOrder()
+        {
+            int startIndex = 0;
+            SeatsInTurnOrder.Clear();
+            foreach(DSeat seat in Seats)
+            {
+                if (seat.SmallBlind)
+                {
+                    startIndex = Seats.IndexOf(seat);
+                }
+            }
+            for (int i = 0; i < 6; i++)
+            {
+                if (startIndex >= 6)
+                {
+                    startIndex = 0;
+                }
+                if (Seats[startIndex].Occupied)
+                {
+                    SeatsInTurnOrder.Add(Seats[startIndex]);
+                }
+                startIndex++;
+            }
+        }
+
+        public void EndRound()
+        {
+            int PotTotal = 0;
+            int NewPot = 0;
+            DSeat winningSeat = new DSeat();
+            List<DSeat> PeopleWhoCanWinMoney = new List<DSeat>();
+            List<DSeat> NewPotPeople = new List<DSeat>();
+            GetTurnOrder();
+            foreach (DSeat seat in SeatsInTurnOrder)
+            {
+                if (seat.Occupied && seat.Active && seat.RoundBid > 0)
+                {
+                    PeopleWhoCanWinMoney.Add(seat);
+                }
+            }
+            foreach (DSeat seat in SeatsInTurnOrder)
+            {
+                if (seat.Occupied)
+                {
+                    PotTotal += seat.RoundBid;
+                }
+            }
+            if (PeopleWhoCanWinMoney.Count == 1)
+            {
+                PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                return;
+            }
+            foreach (DSeat seat in PeopleWhoCanWinMoney)
+            {
+                seat.FindBestHand();
+            }
+            do {
+                PeopleWhoCanWinMoney = PeopleWhoCanWinMoney.OrderByDescending(h => h.HandValue).ToList();
+                if (PeopleWhoCanWinMoney[0].HandValue > PeopleWhoCanWinMoney[1].HandValue)
+                {
+                    for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
+                    {
+                        if (PeopleWhoCanWinMoney[i].RoundBid > PeopleWhoCanWinMoney[0].RoundBid)
+                        {
+                            NewPotPeople.Add(PeopleWhoCanWinMoney[i]);
+                        }
+                    }
+                    if (NewPotPeople.Count == 0)
+                    {
+                        PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                    } else {
+                        foreach (DSeat seat in NewPotPeople)
+                        {
+                            NewPot += seat.RoundBid - PeopleWhoCanWinMoney[0].RoundBid;
+                        }
+                        PotTotal -= NewPot;
+                        PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                        PeopleWhoCanWinMoney = new List<DSeat>(NewPotPeople);
+                        NewPotPeople.Clear();
+                        PotTotal = NewPot;
+                        NewPot = 0;
+                    }
+                } else {
+
+                }
+            } while (NewPotPeople.Count > 0);
         }
 
         public void StartRound()
         {
-            int NumberOfPlayers = NumOfActivePlayers();
             DeckOfCards.Initialize();
 
             foreach (DSeat seat in Seats)
@@ -117,8 +202,20 @@ namespace HighStakes.Domain.Models
                 }
             }
 
-            // going to need to set up pot to handle the side pots before can accept any bids, even small blind big blind
+            GetTurnOrder();
 
+            foreach(DSeat seat in SeatsInTurnOrder)
+            {
+                seat.NewRound();
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                foreach(DSeat seat in SeatsInTurnOrder)
+                {
+                    seat.Pocket.Add(DeckOfCards.Draw());
+                }
+            }
         }
     }
 }

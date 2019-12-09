@@ -17,6 +17,8 @@ namespace HighStakes.Domain.Models
         public bool Occupied { get; set; }
         public int RoundBid { get; set; }
         public bool AllIn { get; set; }
+        public bool Active { get; set; }
+        public int HandValue { get; set; }
 
         public void Initialize()
         {
@@ -27,10 +29,23 @@ namespace HighStakes.Domain.Models
             PlayerHand.Initialize();
             Occupied = false;
             AllIn = false;
+            Active = false;
             RoundBid = 0;
+            HandValue = 0;
         }
 
-        //public int Bid(int bid)
+        public void NewRound()
+        {
+            Pocket.Clear();
+            PlayerHand.HandCards.Clear();
+            PlayerHand.HandValue = 0;
+            Flop.Clear();
+            AllIn = false;
+            Active = true;
+            RoundBid = 0;
+            HandValue = 0;
+        }
+
         public void Bid(int bid)
         {
             if (bid > ChipTotal)
@@ -42,18 +57,11 @@ namespace HighStakes.Domain.Models
                 RoundBid += bid;
                 ChipTotal -= bid;
             }
-            // //place bid
-            // int reducedBid = 0;
-            // if (bid > ChipTotal)
-            // {
-            //     reducedBid = ChipTotal;
-            //     ChipTotal = 0;
-            //     return reducedBid;
-            // } else {
-            //     ChipTotal -= bid;
-            // }
-            // // if out of money signal a new pot at end of round
-            // return bid;
+        }
+
+        public void Fold()
+        {
+            Active = false;
         }
 
         public void SitDown(DUser player, int buyIn)
@@ -76,6 +84,10 @@ namespace HighStakes.Domain.Models
             SmallBlind = false;
             BigBlind = false;
             Dealer = false;
+            AllIn = false;
+            Active = false;
+            RoundBid = 0;
+            HandValue = 0;
         }
 
         public void FindBestHand()
@@ -404,6 +416,7 @@ namespace HighStakes.Domain.Models
             }
             AssignHandValue(BestHand);
             PlayerHand.HandCards = new List<DCard>(BestHand);
+            HandValue = PlayerHand.HandValue;
         }
 
         public bool IsPair(List<DCard> hand)
