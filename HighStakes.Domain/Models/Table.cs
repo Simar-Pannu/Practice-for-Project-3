@@ -130,6 +130,7 @@ namespace HighStakes.Domain.Models
             DSeat winningSeat = new DSeat();
             List<DSeat> PeopleWhoCanWinMoney = new List<DSeat>();
             List<DSeat> NewPotPeople = new List<DSeat>();
+            List<DSeat> MatchingHandValues = new List<DSeat>();
             GetTurnOrder();
             foreach (DSeat seat in SeatsInTurnOrder)
             {
@@ -181,7 +182,57 @@ namespace HighStakes.Domain.Models
                         NewPot = 0;
                     }
                 } else {
-
+                    //get list of people who have matching hand values
+                    MatchingHandValues.Add(PeopleWhoCanWinMoney[0]);
+                    for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
+                    {
+                        if (PeopleWhoCanWinMoney[i].HandValue == PeopleWhoCanWinMoney[0].HandValue)
+                        {
+                            MatchingHandValues.Add(PeopleWhoCanWinMoney[i]);
+                        }
+                    }
+                    //run through the cards one by one to see if someone has a high value
+                    for (int i = 0; i < 5; i++)
+                    {
+                        foreach (DSeat seat in MatchingHandValues)
+                        {
+                            seat.HandValue += seat.PlayerHand.HandCards[i].Value;
+                        }
+                        MatchingHandValues = MatchingHandValues.OrderByDescending(h => h.HandValue).ToList();
+                        if (MatchingHandValues[0].HandValue > MatchingHandValues[1].HandValue)
+                        {
+                            break;
+                        }
+                    }
+                    //if someone has the highest value
+                    if (MatchingHandValues[0].HandValue > MatchingHandValues[1].HandValue)
+                    {
+                        for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
+                        {
+                            if (PeopleWhoCanWinMoney[i].RoundBid > PeopleWhoCanWinMoney[0].RoundBid)
+                            {
+                                NewPotPeople.Add(PeopleWhoCanWinMoney[i]);
+                            }
+                        }
+                        if (NewPotPeople.Count == 0)
+                        {
+                            PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                        } else {
+                            foreach (DSeat seat in NewPotPeople)
+                            {
+                                NewPot += seat.RoundBid - PeopleWhoCanWinMoney[0].RoundBid;
+                            }
+                            PotTotal -= NewPot;
+                            PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                            PeopleWhoCanWinMoney = new List<DSeat>(NewPotPeople);
+                            NewPotPeople.Clear();
+                            PotTotal = NewPot;
+                            NewPot = 0;
+                        }
+                    } else {
+                        
+                    }
+                    //else if they all match
                 }
             } while (NewPotPeople.Count > 0);
         }
