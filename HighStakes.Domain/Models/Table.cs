@@ -14,6 +14,7 @@ namespace HighStakes.Domain.Models
         public int SmallBlindAmount { get; set; }
         public int BigBlindAmount { get; set; }
         public List<DSeat> SeatsInTurnOrder { get; set; }
+        public bool RoundStarted { get; set; }
 
         public void Initialize(int smallBlindAmount, int bigBlindAmount)
         {
@@ -24,6 +25,7 @@ namespace HighStakes.Domain.Models
             SeatsInTurnOrder = new List<DSeat>();
             SmallBlindAmount = smallBlindAmount;
             BigBlindAmount = bigBlindAmount;
+            RoundStarted = false;
             for (int i = 0; i < 6; i++)
             {
                 DSeat seat = new DSeat();
@@ -40,6 +42,10 @@ namespace HighStakes.Domain.Models
                 {
                     player.ChipTotal -= buyIn;
                     seat.SitDown(player, buyIn);
+                    if (RoundStarted)
+                    {
+                        seat.Active = false;
+                    }
                     return true;
                 }
             }
@@ -207,6 +213,7 @@ namespace HighStakes.Domain.Models
                     //if someone has the highest value
                     if (MatchingHandValues[0].HandValue > MatchingHandValues[1].HandValue)
                     {
+                        PeopleWhoCanWinMoney = PeopleWhoCanWinMoney.OrderByDescending(h => h.HandValue).ToList();
                         for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
                         {
                             if (PeopleWhoCanWinMoney[i].RoundBid > PeopleWhoCanWinMoney[0].RoundBid)
@@ -230,7 +237,11 @@ namespace HighStakes.Domain.Models
                             NewPot = 0;
                         }
                     } else {
-                        
+                        // may have matching hand levels but different pot levels
+                        int smallWinnerIndex = -1;
+                        // check if any of the matched values have different bid levels
+                        // check if out of all the people who can win if there are bid levels higher
+                        // 
                     }
                     //else if they all match
                 }
@@ -268,5 +279,7 @@ namespace HighStakes.Domain.Models
                 }
             }
         }
+
+        // people who join in the middle of the round
     }
 }

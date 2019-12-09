@@ -69,6 +69,7 @@ namespace HighStakes.Domain.Models
             Player = player;
             ChipTotal = buyIn;
             Occupied = true;
+            Active = true;
         }
 
         public void StandUp()
