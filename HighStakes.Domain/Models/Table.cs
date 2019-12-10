@@ -155,6 +155,7 @@ namespace HighStakes.Domain.Models
             if (PeopleWhoCanWinMoney.Count == 1)
             {
                 PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                MoveBlinds();
                 return;
             }
             foreach (DSeat seat in PeopleWhoCanWinMoney)
@@ -296,7 +297,34 @@ namespace HighStakes.Domain.Models
                         }
                     }
                 }
-            } while (NewPotPeople.Count > 0);    // need to fix newpotpeople.clear()  can't do that where it is cause loop wont happen
+            } while (NewPotPeople.Count > 0);  
+            // NEED TO ADD MOVING THE SMALL BLIND BIG BLIND
+            MoveBlinds();
+        }
+
+        public void MoveBlinds()
+        {
+            GetTurnOrder();
+            if (SeatsInTurnOrder.Count > 2)
+            {
+                SeatsInTurnOrder[0].SmallBlind = false;
+                SeatsInTurnOrder[1].SmallBlind = true;
+                SeatsInTurnOrder[1].BigBlind = false;
+                SeatsInTurnOrder[2].BigBlind = true;
+            } else if (SeatsInTurnOrder.Count == 2)
+            {
+                SeatsInTurnOrder[0].BigBlind = true;
+                SeatsInTurnOrder[0].SmallBlind = false;
+                SeatsInTurnOrder[1].BigBlind = false;
+                SeatsInTurnOrder[1].SmallBlind = true;
+            } else {
+                EndGame();
+            }
+        }
+
+        public void EndGame()
+        {
+
         }
 
         public void StartRound()
