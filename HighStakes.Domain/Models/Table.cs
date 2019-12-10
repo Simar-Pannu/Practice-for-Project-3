@@ -165,6 +165,7 @@ namespace HighStakes.Domain.Models
                 PeopleWhoCanWinMoney = PeopleWhoCanWinMoney.OrderByDescending(h => h.HandValue).ToList();
                 if (PeopleWhoCanWinMoney[0].HandValue > PeopleWhoCanWinMoney[1].HandValue)
                 {
+                    NewPotPeople.Clear();
                     for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
                     {
                         if (PeopleWhoCanWinMoney[i].RoundBid > PeopleWhoCanWinMoney[0].RoundBid)
@@ -175,20 +176,22 @@ namespace HighStakes.Domain.Models
                     if (NewPotPeople.Count == 0)
                     {
                         PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                        return;
                     } else {
                         foreach (DSeat seat in NewPotPeople)
                         {
                             NewPot += seat.RoundBid - PeopleWhoCanWinMoney[0].RoundBid;
+                            seat.RoundBid -= PeopleWhoCanWinMoney[0].RoundBid;
                         }
                         PotTotal -= NewPot;
                         PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
                         PeopleWhoCanWinMoney = new List<DSeat>(NewPotPeople);
-                        NewPotPeople.Clear();
                         PotTotal = NewPot;
                         NewPot = 0;
                     }
                 } else {
                     //get list of people who have matching hand values
+                    MatchingHandValues.Clear();
                     MatchingHandValues.Add(PeopleWhoCanWinMoney[0]);
                     for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
                     {
@@ -214,6 +217,7 @@ namespace HighStakes.Domain.Models
                     if (MatchingHandValues[0].HandValue > MatchingHandValues[1].HandValue)
                     {
                         PeopleWhoCanWinMoney = PeopleWhoCanWinMoney.OrderByDescending(h => h.HandValue).ToList();
+                        NewPotPeople.Clear();
                         for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
                         {
                             if (PeopleWhoCanWinMoney[i].RoundBid > PeopleWhoCanWinMoney[0].RoundBid)
@@ -228,24 +232,71 @@ namespace HighStakes.Domain.Models
                             foreach (DSeat seat in NewPotPeople)
                             {
                                 NewPot += seat.RoundBid - PeopleWhoCanWinMoney[0].RoundBid;
+                                seat.RoundBid -= PeopleWhoCanWinMoney[0].RoundBid;
                             }
                             PotTotal -= NewPot;
                             PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
                             PeopleWhoCanWinMoney = new List<DSeat>(NewPotPeople);
-                            NewPotPeople.Clear();
+                            PotTotal = NewPot;
+                            NewPot = 0;
+                            foreach (DSeat seat in PeopleWhoCanWinMoney)
+                            {
+                                seat.FindBestHand();
+                            }
+                        }
+                    } else {
+                        // may have matching hand levels but different pot levels\
+                        MatchingHandValues = MatchingHandValues.OrderByDescending(h => h.HandValue).ToList();
+                        List<DSeat> StillMatching = new List<DSeat>();
+                        StillMatching.Add(MatchingHandValues[0]);
+
+                        for (int i = 1; i < MatchingHandValues.Count; i++)
+                        {
+                            if (MatchingHandValues[i].HandValue == StillMatching[0].HandValue)
+                            {
+                                StillMatching.Add(MatchingHandValues[0]);
+                            }
+                        }
+                        StillMatching = StillMatching.OrderBy(h => h.RoundBid).ToList();
+
+                        NewPotPeople.Clear();
+                        for (int i = 1; i < PeopleWhoCanWinMoney.Count; i++)
+                        {
+                            if (PeopleWhoCanWinMoney[i].RoundBid > StillMatching[0].RoundBid)
+                            {
+                                NewPotPeople.Add(PeopleWhoCanWinMoney[i]);
+                            }
+                        }
+                        if (NewPotPeople.Count == 0)
+                        {
+                            // divide pot among still matching
+                            if (PotTotal % StillMatching.Count != 0)
+                            {
+                                StillMatching[0].ChipTotal += 1;
+                            }
+                            foreach (DSeat seat in StillMatching)
+                            {
+                                seat.ChipTotal += PotTotal / StillMatching.Count;
+                            }
+                        } else {
+
+                            foreach (DSeat seat in NewPotPeople)
+                            {
+                                NewPot += seat.RoundBid - StillMatching[0].RoundBid;     
+                                seat.RoundBid -= StillMatching[0].RoundBid;
+                            }
+                            PotTotal -= NewPot;
+                            foreach (DSeat seat in StillMatching)
+                            {
+                                seat.ChipTotal += PotTotal / StillMatching.Count;
+                            }
+                            PeopleWhoCanWinMoney = new List<DSeat>(NewPotPeople);
                             PotTotal = NewPot;
                             NewPot = 0;
                         }
-                    } else {
-                        // may have matching hand levels but different pot levels
-                        int smallWinnerIndex = -1;
-                        // check if any of the matched values have different bid levels
-                        // check if out of all the people who can win if there are bid levels higher
-                        // 
                     }
-                    //else if they all match
                 }
-            } while (NewPotPeople.Count > 0);
+            } while (NewPotPeople.Count > 0);    // need to fix newpotpeople.clear()  can't do that where it is cause loop wont happen
         }
 
         public void StartRound()
@@ -279,7 +330,5 @@ namespace HighStakes.Domain.Models
                 }
             }
         }
-
-        // people who join in the middle of the round
     }
 }
