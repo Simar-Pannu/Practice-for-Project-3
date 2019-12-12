@@ -22,7 +22,9 @@ namespace HighStakes.Storing.Repositories
         }
       }
       _Deck = new DDeck(0,cards);
+    
     }
+
     /*
       public DeckRepository()
     {

@@ -15,15 +15,24 @@ namespace HighStakes.Storing.Repositories
       _Users.Add(new DUser(){UserId =0, FirstName="Simar", LastName="Pannu", ChipTotal=5000, Account= new DAccount(){AccountId=0,UserName="Simar",Password="Pannu"}});
       _Users.Add(new DUser(){UserId =1, FirstName="Han", LastName="Nguyen", ChipTotal=5000, Account= new DAccount(){AccountId=1,UserName="Han",Password="Nguyen"}});
       _Users.Add(new DUser(){UserId =2, FirstName="James", LastName="Goldsmith", ChipTotal=5000, Account= new DAccount(){AccountId=2,UserName="James",Password="Goldsmith"}});
-      
     }
     public void UpdateChipTotal(int UserId, int Chips){
       _Users.Find(x=>x.UserId==UserId).ChipTotal = Chips;
     }
     public void addUsertoDatabase(DUser User){
      // var Account = 
-
+     _Users.Add(User);
     }
+    public bool UserExist(string username, string password){
+      bool a;
+      foreach (var item in _Users)
+      {
+          if(item.Account.Username == username && item.Account.Password == password){return true;}
+          
+      }
+      return false;
+    }
+
     /*
       public UserRepository()
     {
