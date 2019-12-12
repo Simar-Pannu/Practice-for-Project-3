@@ -13,60 +13,412 @@ namespace HighStakes.Domain.Models
         public DHand PlayerHand { get; set; }
         public bool BigBlind { get; set; }
         public bool SmallBlind { get; set; }
+        public bool Dealer { get; set; }
+        public bool Occupied { get; set; }
+        public int RoundBid { get; set; }
+        public bool AllIn { get; set; }
+        public bool Active { get; set; }
+        public int HandValue { get; set; }
 
         public void Initialize()
         {
             Player = new DUser();
             PlayerHand = new DHand();
             Pocket = new List<DCard>();
+            Flop = new List<DCard>();
             PlayerHand.Initialize();
+            Occupied = false;
+            AllIn = false;
+            Active = false;
+            RoundBid = 0;
+            HandValue = 0;
         }
 
-        public IEnumerable<DCard[]> Combinations(int m, int n)
+        public void NewRound()
         {
-                DCard[] result = new DCard[m];
-                Stack<DCard> stack = new Stack<DCard>();
-                stack.Push(new DCard(0,0,""));
-    
-            while (stack.Count > 0)
-            {
-                    int index = stack.Count - 1;
-                    DCard value = stack.Pop();
-    
-                while (value < n) 
-                {
-                    result[index++] = ++value;
-                    stack.Push(value);
+            Pocket.Clear();
+            PlayerHand.HandCards.Clear();
+            PlayerHand.HandValue = 0;
+            Flop.Clear();
+            AllIn = false;
+            Active = true;
+            RoundBid = 0;
+            HandValue = 0;
+        }
 
-                    if (index == m) 
-                    {
-                        yield return result;
-                        break;
-                    }
-                 }
+        public void Bid(int bid)
+        {
+            if (bid > ChipTotal)
+            {
+                RoundBid += ChipTotal;
+                ChipTotal = 0;
+                AllIn = true;
+            } else {
+                RoundBid += bid;
+                ChipTotal -= bid;
             }
         }
 
-        // public void FindBestHand()
-        // {
-        //     List<DCard> AllCards = new List<DCard>();
-        //     foreach(DCard card in Flop)
-        //     {
-        //         AllCards.Add(card);
-        //     }
-        //     foreach(DCard card in Pocket)
-        //     {
-        //         AllCards.Add(card);
-        //     }
-        //     AllCards = AllCards.OrderBy(h => h.Value).ToList();
+        public void Fold()
+        {
+            Active = false;
+        }
 
-        //     AllCards.   
-        // }
+        public void SitDown(DUser player, int buyIn)
+        {
+            Player = player;
+            ChipTotal = buyIn;
+            Occupied = true;
+            Active = true;
+        }
 
-        //public List<DCard> AllHandCombinations()
-        // {
+        public void StandUp()
+        {
+            Player.ChipTotal += ChipTotal;
+            Player = new DUser();
+            ChipTotal = 0;
+            Occupied = false;
+            PlayerHand = new DHand();
+            Pocket = new List<DCard>();
+            Flop = new List<DCard>();
+            PlayerHand.Initialize();
+            SmallBlind = false;
+            BigBlind = false;
+            Dealer = false;
+            AllIn = false;
+            Active = false;
+            RoundBid = 0;
+            HandValue = 0;
+        }
 
-        // }
+        public void FindBestHand()
+        {
+            List<DCard> AllCards = new List<DCard>();
+            List<DCard> BestHand = new List<DCard>();
+            List<DCard> TempHand = new List<DCard>();
+            int bestValue = 0;
+            int tempValue = 0;
+
+            foreach(DCard card in Flop)
+            {
+                AllCards.Add(card);
+            }
+            foreach(DCard card in Pocket)
+            {
+                AllCards.Add(card);
+            }
+            AllCards = AllCards.OrderByDescending(h => h.Value).ToList();
+
+            BestHand.Add(AllCards[0]);
+            BestHand.Add(AllCards[1]);
+            BestHand.Add(AllCards[2]);
+            BestHand.Add(AllCards[3]);
+            BestHand.Add(AllCards[4]);
+            AssignHandValue(BestHand);
+            bestValue = PlayerHand.HandValue;
+
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[5]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+            
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[0]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[1]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+
+            TempHand.Clear();
+            TempHand.Add(AllCards[2]);
+            TempHand.Add(AllCards[3]);
+            TempHand.Add(AllCards[4]);
+            TempHand.Add(AllCards[5]);
+            TempHand.Add(AllCards[6]);
+            AssignHandValue(TempHand);
+            tempValue = PlayerHand.HandValue;
+
+            if (tempValue > bestValue)
+            {
+                BestHand = new List<DCard>(TempHand);
+                bestValue = tempValue;
+            }
+            AssignHandValue(BestHand);
+            PlayerHand.HandCards = new List<DCard>(BestHand);
+            HandValue = PlayerHand.HandValue;
+        }
 
         public bool IsPair(List<DCard> hand)
         {
@@ -170,7 +522,7 @@ namespace HighStakes.Domain.Models
                 PlayerHand.HandValue = 100;
             } else 
             {
-                PlayerHand.HandValue += orderedHand[0].Value;
+                PlayerHand.HandValue = orderedHand[0].Value;
             }
         }
     }
