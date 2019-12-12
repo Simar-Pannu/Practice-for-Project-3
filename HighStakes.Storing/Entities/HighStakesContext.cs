@@ -10,6 +10,7 @@ public class HighStakesContext : DbContext
 
     public HighStakesContext(DbContextOptions<HighStakesContext> options) : base(options)
     {
+    //  options
     }
 
     public DbSet<Account> Accounts { get; set; }
