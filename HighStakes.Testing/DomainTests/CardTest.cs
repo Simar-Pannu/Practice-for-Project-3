@@ -10,9 +10,12 @@ namespace HighStakes.Testing.DomainTests
         {
             var card = new DCard(0,0,"");
 
-            // var index = home.Index();
-            
-            // Assert.NotNull(index);
+            card.Initialize(14, "Heart", "Ace of Hearts");
+
+            Assert.IsType<DCard>(card);
+            Assert.True(card.Name.Equals("Ace of Hearts"));
+            Assert.True(card.Suit.Equals("Heart"));
+            Assert.True(card.Value == 14);
         }
     }
 }
