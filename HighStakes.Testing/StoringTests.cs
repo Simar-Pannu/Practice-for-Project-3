@@ -14,7 +14,7 @@ public class StoringTests{
   public void Test_GetUser(){
     UserRepository ur = new UserRepository();
     var Users = ur.GetUsers();
-    Assert.True(Users.Exists(x=>x.Account.Username == "Simar"));
+    Assert.True(Users.Exists(x=>x.Account.UserName == "Simar"));
   }
 
 }    

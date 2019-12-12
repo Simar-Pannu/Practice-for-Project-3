@@ -27,7 +27,7 @@ namespace HighStakes.Storing.Repositories
       bool a;
       foreach (var item in _Users)
       {
-          if(item.Account.Username == username && item.Account.Password == password){return true;}
+          if(item.Account.UserName == username && item.Account.Password == password){return true;}
           
       }
       return false;
