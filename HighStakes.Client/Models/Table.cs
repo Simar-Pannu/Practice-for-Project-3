@@ -1,4 +1,5 @@
 using System;
+using
 using System.Collections.Generic;
 
 namespace HighStakes.Client.Models
@@ -6,14 +7,12 @@ namespace HighStakes.Client.Models
   [Serializable]
   public class Table
   {
-    public const int MAX_PLAYER = 8;
-    public int Counter { get; set; }
-
-    public List<Player> Players { get; set; }
+    public DTable table;
 
     public Table()
     {
-      Players = new List<Player>();
+      this.table = new DTable();
+      this.table.Initialize(600, 1200);
     }
 
   }

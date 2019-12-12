@@ -27,7 +27,8 @@ namespace HighStakes.Client.Controllers
       return View();
     }
 
-    public IActionResult Table()
+    [HttpPost]
+    public IActionResult Table(Player player)
     {
       Table tableSample;
 
@@ -76,6 +77,7 @@ namespace HighStakes.Client.Controllers
     {
       return View();
     }
+
     [HttpGet("{num}")]
     public Table Add(string num)
     {

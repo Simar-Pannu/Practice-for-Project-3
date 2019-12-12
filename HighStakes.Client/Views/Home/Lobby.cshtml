@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<param id="user" value=@ViewData["accountnum"]>
+<param id="user" value=@ViewData["userTemp"]>
 
 <div class="text-center">
   <h1 class="display-4" style="color: White">The Lobby</h1>
@@ -23,6 +23,6 @@
 </style>
 
 <script>
-  window.sessionStorage.AccountNum = @ViewData["accountnum"];
-  window.sessionStorage.AccountNum = $('#user').val();
+  window.sessionStorage.UserID = @ViewData["userTemp"];
+  window.sessionStorage.UserID = $('#user').val();
 </script>
