@@ -19,8 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HighStakes.Storing\HighStakes.Storing.csproj" />
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 9ed10d56d6ef257c50d98e379605ac3cbd1329cd
     <ProjectReference Include="..\HighStakes.Domain\HighStakes.Domain.csproj" />
+    <ProjectReference Include="..\HighStakes.Storing\HighStakes.Storing.csproj" />
   </ItemGroup>
 
 </Project>
