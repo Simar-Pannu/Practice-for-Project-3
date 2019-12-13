@@ -9,8 +9,6 @@ namespace HighStakes.Domain.Models
         public int TableId { get; set; }
         public List<DSeat> Seats { get; set; }
         public DDeck DeckOfCards { get; set; }
-        public DPot CurrentPot { get; set; }
-        public List<DPot> SidePots { get; set; }
         public int SmallBlindAmount { get; set; }
         public int BigBlindAmount { get; set; }
         public List<DSeat> SeatsInTurnOrder { get; set; }
@@ -20,8 +18,6 @@ namespace HighStakes.Domain.Models
         {
             Seats = new List<DSeat>();
             DeckOfCards.Initialize();
-            SidePots = new List<DPot>();
-            CurrentPot.Initialize();
             SeatsInTurnOrder = new List<DSeat>();
             SmallBlindAmount = smallBlindAmount;
             BigBlindAmount = bigBlindAmount;

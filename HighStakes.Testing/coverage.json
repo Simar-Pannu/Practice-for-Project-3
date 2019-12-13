@@ -1,4 +1,957 @@
 {
+  "HighStakes.Client.dll": {
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Program.cs": {
+      "HighStakes.Client.Program": {
+        "System.Void HighStakes.Client.Program::Main(System.String[])": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder HighStakes.Client.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 12,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Startup.cs": {
+      "HighStakes.Client.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration HighStakes.Client.Startup::get_Configuration()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Client.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Client.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 9,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 78,
+              "EndOffset": 80,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 78,
+              "EndOffset": 103,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Client.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Models\\ErrorViewModel.cs": {
+      "HighStakes.Client.Models.ErrorViewModel": {
+        "System.String HighStakes.Client.Models.ErrorViewModel::get_RequestId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Client.Models.ErrorViewModel::get_ShowRequestId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Controllers\\HomeController.cs": {
+      "HighStakes.Client.Controllers.HomeController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult HighStakes.Client.Controllers.HomeController::Index()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult HighStakes.Client.Controllers.HomeController::Privacy()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult HighStakes.Client.Controllers.HomeController::Error()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 14,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 26,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Client.Controllers.HomeController::.ctor(Microsoft.Extensions.Logging.ILogger`1<HighStakes.Client.Controllers.HomeController>)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "HighStakes.Client.Views.dll": {
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Views\\Home\\Index.cshtml": {
+      "AspNetCore.Views_Home_Index/<ExecuteAsync>d__0": {
+        "System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__0::MoveNext()": {
+          "Lines": {
+            "2": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Views\\Home\\Privacy.cshtml": {
+      "AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0": {
+        "System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()": {
+          "Lines": {
+            "2": 0,
+            "4": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Views\\Shared\\Error.cshtml": {
+      "AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0": {
+        "System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()": {
+          "Lines": {
+            "3": 0,
+            "9": 0,
+            "10": 0,
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Views\\Shared\\_Layout.cshtml": {
+      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__23_0>d": {
+        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__23_0>d::MoveNext()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": [
+            {
+              "Line": 6,
+              "Offset": 8,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 153,
+              "EndOffset": 155,
+              "Path": 0,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 153,
+              "EndOffset": 178,
+              "Path": 1,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 322,
+              "EndOffset": 324,
+              "Path": 0,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 8,
+              "EndOffset": 363,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 322,
+              "EndOffset": 391,
+              "Path": 1,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 425,
+              "EndOffset": 427,
+              "Path": 0,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 458,
+              "EndOffset": 460,
+              "Path": 0,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 8,
+              "EndOffset": 500,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 458,
+              "EndOffset": 529,
+              "Path": 1,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 425,
+              "EndOffset": 538,
+              "Path": 1,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 644,
+              "EndOffset": 646,
+              "Path": 0,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 644,
+              "EndOffset": 669,
+              "Path": 1,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 814,
+              "EndOffset": 816,
+              "Path": 0,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 8,
+              "EndOffset": 856,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 814,
+              "EndOffset": 885,
+              "Path": 1,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 921,
+              "EndOffset": 923,
+              "Path": 0,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 954,
+              "EndOffset": 956,
+              "Path": 0,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 8,
+              "EndOffset": 996,
+              "Path": 4,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 954,
+              "EndOffset": 1025,
+              "Path": 1,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 6,
+              "Offset": 921,
+              "EndOffset": 1034,
+              "Path": 1,
+              "Ordinal": 18,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__23_1>d": {
+        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__23_1>d::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 141,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 488,
+              "EndOffset": 490,
+              "Path": 0,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 529,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 488,
+              "EndOffset": 557,
+              "Path": 1,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 591,
+              "EndOffset": 593,
+              "Path": 0,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 624,
+              "EndOffset": 626,
+              "Path": 0,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 666,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 624,
+              "EndOffset": 695,
+              "Path": 1,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 591,
+              "EndOffset": 704,
+              "Path": 1,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1106,
+              "EndOffset": 1108,
+              "Path": 0,
+              "Ordinal": 21,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 1148,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1106,
+              "EndOffset": 1177,
+              "Path": 1,
+              "Ordinal": 22,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1213,
+              "EndOffset": 1215,
+              "Path": 0,
+              "Ordinal": 23,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1246,
+              "EndOffset": 1248,
+              "Path": 0,
+              "Ordinal": 25,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 1288,
+              "Path": 4,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1246,
+              "EndOffset": 1317,
+              "Path": 1,
+              "Ordinal": 26,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1213,
+              "EndOffset": 1326,
+              "Path": 1,
+              "Ordinal": 24,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1728,
+              "EndOffset": 1730,
+              "Path": 0,
+              "Ordinal": 27,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 1770,
+              "Path": 5,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1728,
+              "EndOffset": 1799,
+              "Path": 1,
+              "Ordinal": 28,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1835,
+              "EndOffset": 1837,
+              "Path": 0,
+              "Ordinal": 29,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1868,
+              "EndOffset": 1870,
+              "Path": 0,
+              "Ordinal": 31,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 1910,
+              "Path": 6,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1868,
+              "EndOffset": 1939,
+              "Path": 1,
+              "Ordinal": 32,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1835,
+              "EndOffset": 1948,
+              "Path": 1,
+              "Ordinal": 30,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2368,
+              "EndOffset": 2370,
+              "Path": 0,
+              "Ordinal": 33,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 2410,
+              "Path": 7,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2368,
+              "EndOffset": 2439,
+              "Path": 1,
+              "Ordinal": 34,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2475,
+              "EndOffset": 2477,
+              "Path": 0,
+              "Ordinal": 35,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2508,
+              "EndOffset": 2510,
+              "Path": 0,
+              "Ordinal": 37,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 2550,
+              "Path": 8,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2508,
+              "EndOffset": 2579,
+              "Path": 1,
+              "Ordinal": 38,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2475,
+              "EndOffset": 2588,
+              "Path": 1,
+              "Ordinal": 36,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2694,
+              "EndOffset": 2696,
+              "Path": 0,
+              "Ordinal": 39,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2694,
+              "EndOffset": 2719,
+              "Path": 1,
+              "Ordinal": 40,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2842,
+              "EndOffset": 2844,
+              "Path": 0,
+              "Ordinal": 41,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 2884,
+              "Path": 9,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2842,
+              "EndOffset": 2913,
+              "Path": 1,
+              "Ordinal": 42,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2949,
+              "EndOffset": 2951,
+              "Path": 0,
+              "Ordinal": 43,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2982,
+              "EndOffset": 2984,
+              "Path": 0,
+              "Ordinal": 45,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 3025,
+              "Path": 10,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2982,
+              "EndOffset": 3054,
+              "Path": 1,
+              "Ordinal": 46,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 2949,
+              "EndOffset": 3063,
+              "Path": 1,
+              "Ordinal": 44,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3169,
+              "EndOffset": 3171,
+              "Path": 0,
+              "Ordinal": 47,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3169,
+              "EndOffset": 3194,
+              "Path": 1,
+              "Ordinal": 48,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3317,
+              "EndOffset": 3319,
+              "Path": 0,
+              "Ordinal": 49,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 3360,
+              "Path": 11,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3317,
+              "EndOffset": 3389,
+              "Path": 1,
+              "Ordinal": 50,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3425,
+              "EndOffset": 3427,
+              "Path": 0,
+              "Ordinal": 51,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3458,
+              "EndOffset": 3460,
+              "Path": 0,
+              "Ordinal": 53,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 3501,
+              "Path": 12,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3458,
+              "EndOffset": 3530,
+              "Path": 1,
+              "Ordinal": 54,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3425,
+              "EndOffset": 3539,
+              "Path": 1,
+              "Ordinal": 52,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3645,
+              "EndOffset": 3647,
+              "Path": 0,
+              "Ordinal": 55,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 3645,
+              "EndOffset": 3670,
+              "Path": 1,
+              "Ordinal": 56,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 3942,
+              "EndOffset": 3944,
+              "Path": 0,
+              "Ordinal": 57,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 3985,
+              "Path": 13,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 3942,
+              "EndOffset": 4014,
+              "Path": 1,
+              "Ordinal": 58,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 4050,
+              "EndOffset": 4052,
+              "Path": 0,
+              "Ordinal": 59,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 4083,
+              "EndOffset": 4085,
+              "Path": 0,
+              "Ordinal": 61,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 8,
+              "EndOffset": 4126,
+              "Path": 14,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 4083,
+              "EndOffset": 4155,
+              "Path": 1,
+              "Ordinal": 62,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 4050,
+              "EndOffset": 4164,
+              "Path": 1,
+              "Ordinal": 60,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Views\\_ViewStart.cshtml": {
+      "AspNetCore.Views__ViewStart/<ExecuteAsync>d__0": {
+        "System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()": {
+          "Lines": {
+            "2": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
   "HighStakes.Domain.dll": {
     "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Account.cs": {
       "HighStakes.Domain.Models.DAccount": {
@@ -26,46 +979,46 @@
       "HighStakes.Domain.Models.DCard": {
         "System.Int32 HighStakes.Domain.Models.DCard::get_CardId()": {
           "Lines": {
-            "5": 105
+            "5": 157
           },
           "Branches": []
         },
         "System.Int32 HighStakes.Domain.Models.DCard::get_Value()": {
           "Lines": {
-            "6": 212
+            "6": 316
           },
           "Branches": []
         },
         "System.String HighStakes.Domain.Models.DCard::get_Suit()": {
           "Lines": {
-            "7": 211
+            "7": 315
           },
           "Branches": []
         },
         "System.String HighStakes.Domain.Models.DCard::get_Name()": {
           "Lines": {
-            "8": 106
+            "8": 162
           },
           "Branches": []
         },
         "System.Void HighStakes.Domain.Models.DCard::Initialize(System.Int32,System.String,System.String)": {
           "Lines": {
-            "18": 105,
-            "19": 105,
-            "20": 105,
-            "21": 105,
-            "22": 105
+            "18": 157,
+            "19": 157,
+            "20": 157,
+            "21": 157,
+            "22": 157
           },
           "Branches": []
         },
         "System.Void HighStakes.Domain.Models.DCard::.ctor(System.Int32,System.Int32,System.String)": {
           "Lines": {
-            "10": 105,
-            "11": 105,
-            "12": 105,
-            "13": 105,
-            "14": 105,
-            "15": 105
+            "10": 157,
+            "11": 157,
+            "12": 157,
+            "13": 157,
+            "14": 157,
+            "15": 157
           },
           "Branches": []
         }
@@ -75,112 +1028,112 @@
       "HighStakes.Domain.Models.DDeck": {
         "System.Int32 HighStakes.Domain.Models.DDeck::get_DeckId()": {
           "Lines": {
-            "8": 2
+            "8": 3
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Domain.Models.DDeck::get_Cards()": {
           "Lines": {
-            "9": 521
+            "9": 989
           },
           "Branches": []
         },
         "System.Void HighStakes.Domain.Models.DDeck::Initialize()": {
           "Lines": {
-            "17": 2,
-            "18": 2,
-            "20": 56,
-            "21": 26,
-            "22": 26,
-            "23": 26,
-            "24": 26,
-            "25": 26,
-            "26": 26,
-            "27": 2,
-            "28": 2,
-            "29": 2,
-            "30": 2,
-            "31": 2,
-            "32": 26,
-            "33": 2,
-            "34": 2,
-            "35": 2,
-            "36": 2,
-            "37": 2,
-            "38": 24,
-            "39": 2,
-            "40": 2,
-            "41": 2,
-            "42": 2,
-            "43": 2,
-            "44": 22,
-            "45": 2,
-            "46": 2,
-            "47": 2,
-            "48": 2,
-            "49": 2,
-            "50": 20,
-            "51": 2,
-            "52": 2,
-            "53": 2,
-            "54": 2,
-            "55": 2,
-            "56": 18,
-            "57": 2,
-            "58": 2,
-            "59": 2,
-            "60": 2,
-            "61": 2,
-            "62": 16,
-            "63": 2,
-            "64": 2,
-            "65": 2,
-            "66": 2,
-            "67": 2,
-            "68": 14,
-            "69": 2,
-            "70": 2,
-            "71": 2,
-            "72": 2,
-            "73": 2,
-            "74": 12,
-            "75": 2,
-            "76": 2,
-            "77": 2,
-            "78": 2,
-            "79": 2,
-            "80": 10,
-            "81": 2,
-            "82": 2,
-            "83": 2,
-            "84": 2,
-            "85": 2,
-            "86": 8,
-            "87": 2,
-            "88": 2,
-            "89": 2,
-            "90": 2,
-            "91": 2,
-            "92": 6,
-            "93": 2,
-            "94": 2,
-            "95": 2,
-            "96": 2,
-            "97": 2,
-            "98": 4,
-            "99": 2,
-            "100": 2,
-            "101": 2,
-            "102": 2,
-            "103": 2,
-            "104": 2,
-            "105": 26,
-            "106": 26,
-            "107": 26,
-            "108": 26,
-            "109": 26,
-            "111": 2,
-            "112": 2
+            "17": 3,
+            "18": 3,
+            "20": 84,
+            "21": 39,
+            "22": 39,
+            "23": 39,
+            "24": 39,
+            "25": 39,
+            "26": 39,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "32": 39,
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 36,
+            "39": 3,
+            "40": 3,
+            "41": 3,
+            "42": 3,
+            "43": 3,
+            "44": 33,
+            "45": 3,
+            "46": 3,
+            "47": 3,
+            "48": 3,
+            "49": 3,
+            "50": 30,
+            "51": 3,
+            "52": 3,
+            "53": 3,
+            "54": 3,
+            "55": 3,
+            "56": 27,
+            "57": 3,
+            "58": 3,
+            "59": 3,
+            "60": 3,
+            "61": 3,
+            "62": 24,
+            "63": 3,
+            "64": 3,
+            "65": 3,
+            "66": 3,
+            "67": 3,
+            "68": 21,
+            "69": 3,
+            "70": 3,
+            "71": 3,
+            "72": 3,
+            "73": 3,
+            "74": 18,
+            "75": 3,
+            "76": 3,
+            "77": 3,
+            "78": 3,
+            "79": 3,
+            "80": 15,
+            "81": 3,
+            "82": 3,
+            "83": 3,
+            "84": 3,
+            "85": 3,
+            "86": 12,
+            "87": 3,
+            "88": 3,
+            "89": 3,
+            "90": 3,
+            "91": 3,
+            "92": 9,
+            "93": 3,
+            "94": 3,
+            "95": 3,
+            "96": 3,
+            "97": 3,
+            "98": 6,
+            "99": 3,
+            "100": 3,
+            "101": 3,
+            "102": 3,
+            "103": 3,
+            "104": 3,
+            "105": 39,
+            "106": 39,
+            "107": 39,
+            "108": 39,
+            "109": 39,
+            "111": 3,
+            "112": 3
           },
           "Branches": [
             {
@@ -189,7 +1142,7 @@
               "EndOffset": 20,
               "Path": 1,
               "Ordinal": 27,
-              "Hits": 26
+              "Hits": 39
             },
             {
               "Line": 26,
@@ -197,7 +1150,7 @@
               "EndOffset": 84,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 26,
@@ -205,7 +1158,7 @@
               "EndOffset": 164,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 24
+              "Hits": 36
             },
             {
               "Line": 32,
@@ -213,7 +1166,7 @@
               "EndOffset": 174,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 32,
@@ -221,7 +1174,7 @@
               "EndOffset": 254,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 22
+              "Hits": 33
             },
             {
               "Line": 38,
@@ -229,7 +1182,7 @@
               "EndOffset": 264,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 38,
@@ -237,7 +1190,7 @@
               "EndOffset": 344,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 20
+              "Hits": 30
             },
             {
               "Line": 44,
@@ -245,7 +1198,7 @@
               "EndOffset": 354,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 44,
@@ -253,7 +1206,7 @@
               "EndOffset": 434,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 18
+              "Hits": 27
             },
             {
               "Line": 50,
@@ -261,7 +1214,7 @@
               "EndOffset": 444,
               "Path": 0,
               "Ordinal": 8,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 50,
@@ -269,7 +1222,7 @@
               "EndOffset": 524,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 16
+              "Hits": 24
             },
             {
               "Line": 56,
@@ -277,7 +1230,7 @@
               "EndOffset": 534,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 56,
@@ -285,7 +1238,7 @@
               "EndOffset": 614,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 14
+              "Hits": 21
             },
             {
               "Line": 62,
@@ -293,7 +1246,7 @@
               "EndOffset": 624,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 62,
@@ -301,7 +1254,7 @@
               "EndOffset": 704,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 12
+              "Hits": 18
             },
             {
               "Line": 68,
@@ -309,7 +1262,7 @@
               "EndOffset": 714,
               "Path": 0,
               "Ordinal": 14,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 68,
@@ -317,7 +1270,7 @@
               "EndOffset": 798,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 10
+              "Hits": 15
             },
             {
               "Line": 74,
@@ -325,7 +1278,7 @@
               "EndOffset": 808,
               "Path": 0,
               "Ordinal": 16,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 74,
@@ -333,7 +1286,7 @@
               "EndOffset": 892,
               "Path": 1,
               "Ordinal": 17,
-              "Hits": 8
+              "Hits": 12
             },
             {
               "Line": 80,
@@ -341,7 +1294,7 @@
               "EndOffset": 903,
               "Path": 0,
               "Ordinal": 18,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 80,
@@ -349,7 +1302,7 @@
               "EndOffset": 987,
               "Path": 1,
               "Ordinal": 19,
-              "Hits": 6
+              "Hits": 9
             },
             {
               "Line": 86,
@@ -357,7 +1310,7 @@
               "EndOffset": 998,
               "Path": 0,
               "Ordinal": 20,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 86,
@@ -365,7 +1318,7 @@
               "EndOffset": 1082,
               "Path": 1,
               "Ordinal": 21,
-              "Hits": 4
+              "Hits": 6
             },
             {
               "Line": 92,
@@ -373,7 +1326,7 @@
               "EndOffset": 1093,
               "Path": 0,
               "Ordinal": 22,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 92,
@@ -381,7 +1334,7 @@
               "EndOffset": 1174,
               "Path": 1,
               "Ordinal": 23,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 98,
@@ -389,7 +1342,7 @@
               "EndOffset": 1185,
               "Path": 0,
               "Ordinal": 24,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 98,
@@ -397,7 +1350,7 @@
               "EndOffset": 1264,
               "Path": 1,
               "Ordinal": 25,
-              "Hits": 26
+              "Hits": 39
             },
             {
               "Line": 20,
@@ -405,23 +1358,23 @@
               "EndOffset": 1336,
               "Path": 0,
               "Ordinal": 26,
-              "Hits": 2
+              "Hits": 3
             }
           ]
         },
         "System.Void HighStakes.Domain.Models.DDeck::Shuffle()": {
           "Lines": {
-            "115": 2,
-            "116": 2,
-            "117": 2,
-            "118": 206,
-            "119": 102,
-            "120": 102,
-            "121": 102,
-            "122": 102,
-            "123": 102,
-            "124": 102,
-            "125": 2
+            "115": 4,
+            "116": 4,
+            "117": 4,
+            "118": 412,
+            "119": 204,
+            "120": 204,
+            "121": 204,
+            "122": 204,
+            "123": 204,
+            "124": 204,
+            "125": 4
           },
           "Branches": [
             {
@@ -430,7 +1383,7 @@
               "EndOffset": 21,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 102
+              "Hits": 204
             },
             {
               "Line": 118,
@@ -438,7 +1391,7 @@
               "EndOffset": 99,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 4
             }
           ]
         },
@@ -454,11 +1407,11 @@
         },
         "System.Void HighStakes.Domain.Models.DDeck::.ctor(System.Int32,System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
           "Lines": {
-            "11": 2,
-            "12": 2,
-            "13": 2,
-            "14": 2,
-            "15": 2
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3
           },
           "Branches": []
         }
@@ -3465,25 +4418,25 @@
         },
         "HighStakes.Domain.Models.DAccount HighStakes.Domain.Models.DUser::get_Account()": {
           "Lines": {
-            "10": 0
+            "9": 0
           },
           "Branches": []
         },
         "System.String HighStakes.Domain.Models.DUser::get_FirstName()": {
           "Lines": {
-            "11": 0
+            "10": 0
           },
           "Branches": []
         },
         "System.String HighStakes.Domain.Models.DUser::get_LastName()": {
           "Lines": {
-            "12": 0
+            "11": 0
           },
           "Branches": []
         },
         "System.Int32 HighStakes.Domain.Models.DUser::get_ChipTotal()": {
           "Lines": {
-            "13": 0
+            "12": 0
           },
           "Branches": []
         }
@@ -3500,5 +4453,476 @@
       }
     }
   },
-  "HighStakes.Storing.dll": {}
+  "HighStakes.Storing.dll": {
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Repositories\\DeckRepository.cs": {
+      "HighStakes.Storing.Repositories.DeckRepository": {
+        "HighStakes.Domain.Models.DDeck HighStakes.Storing.Repositories.DeckRepository::GetDeck()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Storing.Repositories.DeckRepository::.ctor()": {
+          "Lines": {
+            "10": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Repositories\\UserRepository.cs": {
+      "HighStakes.Storing.Repositories.UserRepository": {
+        "HighStakes.Domain.Models.DUser HighStakes.Storing.Repositories.UserRepository::GetUser(System.Int32)": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DUser> HighStakes.Storing.Repositories.UserRepository::GetUsers()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Storing.Repositories.UserRepository::UpdateChipTotal(System.Int32,System.Int32)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Storing.Repositories.UserRepository::addUsertoDatabase(HighStakes.Domain.Models.DUser)": {
+          "Lines": {
+            "21": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Storing.Repositories.UserRepository::UserExist(System.String,System.String)": {
+          "Lines": {
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 81,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 42,
+              "EndOffset": 63,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 66,
+              "EndOffset": 68,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 66,
+              "EndOffset": 73,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 81,
+              "EndOffset": 83,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Storing.Repositories.UserRepository::.ctor()": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Entities\\Account.cs": {
+      "HighStakes.Storing.Entities.Account": {
+        "System.Int32 HighStakes.Storing.Entities.Account::get_AccountId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Storing.Entities.Account::get_UserName()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Storing.Entities.Account::get_Password()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Entities\\Card.cs": {
+      "HighStakes.Storing.Entities.Card": {
+        "System.Int32 HighStakes.Storing.Entities.Card::get_CardId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Storing.Entities.Card::get_Value()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Storing.Entities.Card::get_Suit()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Storing.Entities.Card::get_Name()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Entities\\HighStakesContext.cs": {
+      "HighStakes.Storing.Entities.HighStakesContext": {
+        "System.Void HighStakes.Storing.Entities.HighStakesContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<HighStakes.Storing.Entities.Account> HighStakes.Storing.Entities.HighStakesContext::get_Accounts()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<HighStakes.Storing.Entities.Card> HighStakes.Storing.Entities.HighStakesContext::get_Cards()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<HighStakes.Storing.Entities.User> HighStakes.Storing.Entities.HighStakesContext::get_Users()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Storing.Entities.HighStakesContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 138,
+              "EndOffset": 140,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 138,
+              "EndOffset": 163,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 268,
+              "EndOffset": 270,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 268,
+              "EndOffset": 293,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Storing.Entities.HighStakesContext::BuildDeck()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 117,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 106,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 106,
+              "EndOffset": 108,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 117,
+              "EndOffset": 119,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DAccount> HighStakes.Storing.Entities.HighStakesContext::BuildAccount()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "58": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DUser> HighStakes.Storing.Entities.HighStakesContext::BuildUser()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Entities\\User.cs": {
+      "HighStakes.Storing.Entities.User": {
+        "System.Int32 HighStakes.Storing.Entities.User::get_UserId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Storing.Entities.User::get_AccountId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Storing.Entities.User::get_FirstName()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Storing.Entities.User::get_LastName()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> HighStakes.Storing.Entities.User::get_ChipTotal()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Storing.Entities.Account HighStakes.Storing.Entities.User::get_Account()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Adapters\\SqlAdapter.cs": {
+      "HighStakes.Storing.Adapters.SqlAdapter": {
+        "HighStakes.Domain.Models.DDeck HighStakes.Storing.Adapters.SqlAdapter::getDeck()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DUser> HighStakes.Storing.Adapters.SqlAdapter::getUsers()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Domain.Models.DDeck HighStakes.Storing.Adapters.SqlAdapter::BuildDeck()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 117,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 106,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 106,
+              "EndOffset": 108,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 117,
+              "EndOffset": 119,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DUser> HighStakes.Storing.Adapters.SqlAdapter::BuildUsers()": {
+          "Lines": {
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Storing.Adapters.SqlAdapter::.ctor()": {
+          "Lines": {
+            "14": 0,
+            "16": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
 }
