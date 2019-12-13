@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HighStakes.Domain\HighStakes.Domain.csproj" />
     <ProjectReference Include="..\HighStakes.Storing\HighStakes.Storing.csproj" />
+    <ProjectReference Include="..\HighStakes.Client\HighStakes.Client.csproj" />
   </ItemGroup>
 
 </Project>

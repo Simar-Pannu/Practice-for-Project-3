@@ -1,20 +1,19 @@
 using HighStakes.Domain.Models;
 using System.Collections.Generic;
 using HighStakes.Storing.Entities;
+using HighStakes.Storing.Adapters;
 
 namespace HighStakes.Storing.Repositories
 {
   public class UserRepository
   {
-    HighStakesContext db = new HighStakesContext();
     List<DUser> _Users= new List<DUser>();
+    SqlAdapter sa = new SqlAdapter();
     public DUser GetUser(int id) { return _Users.Find(x=>x.UserId == id);}
     public List<DUser> GetUsers(){return _Users;}
     public UserRepository()
     {
-      _Users.Add(new DUser(){UserId =1, FirstName="Simar", LastName="Pannu", ChipTotal=5000, Account= new DAccount(){AccountId=0,UserName="Simar",Password="Pannu"}});
-      _Users.Add(new DUser(){UserId =2, FirstName="Han", LastName="Nguyen", ChipTotal=5000, Account= new DAccount(){AccountId=1,UserName="Han",Password="Nguyen"}});
-      _Users.Add(new DUser(){UserId =3, FirstName="James", LastName="Goldsmith", ChipTotal=5000, Account= new DAccount(){AccountId=2,UserName="James",Password="Goldsmith"}});
+      sa.BuildUsers();
     }
     public void UpdateChipTotal(int UserId, int Chips){
       _Users.Find(x=>x.UserId==UserId).ChipTotal = Chips;
@@ -24,7 +23,7 @@ namespace HighStakes.Storing.Repositories
      _Users.Add(User);
     }
     public bool UserExist(string username, string password){
-      bool a;
+    
       foreach (var item in _Users)
       {
           if(item.Account.UserName == username && item.Account.Password == password){return true;}
