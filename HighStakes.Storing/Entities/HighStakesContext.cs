@@ -1,26 +1,68 @@
+using System.Collections.Generic;
+using HighStakes.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HighStakes.Storing.Entities
 {
-public class HighStakesContext : DbContext
-{
-    public HighStakesContext()
-    {
-    }
+  public class HighStakesContext : DbContext
+  {
 
-    public HighStakesContext(DbContextOptions<HighStakesContext> options) : base(options)
+
+    protected override void OnConfiguring(DbContextOptionsBuilder dbContext)
     {
-    //  options
+      dbContext.UseNpgsql("server=localhost:5432;database=postgres;user id=postgres;password=postgres");
     }
 
     public DbSet<Account> Accounts { get; set; }
     public DbSet<Card> Cards { get; set; }
     public DbSet<User> Users { get; set; }
-   protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Account>().ToTable("Account");
-        modelBuilder.Entity<Card>().ToTable("Card");
-        modelBuilder.Entity<User>().ToTable("User");
+      modelBuilder.Entity<DAccount>(o => o.HasKey(k => k.AccountId));
+      modelBuilder.Entity<DAccount>().Property(p => p.AccountId).UseSerialColumn();
+      modelBuilder.Entity<DAccount>().HasData(BuildAccount());
+
+      modelBuilder.Entity<DCard>(o => o.HasKey(k => k.CardId));
+      modelBuilder.Entity<DCard>().Property(p => p.CardId).UseSerialColumn();
+      modelBuilder.Entity<DCard>().HasData(BuildDeck());
+
+
+      modelBuilder.Entity<User>(o => o.HasKey(k => k.AccountId));
+      modelBuilder.Entity<User>().Property(p => p.UserId).UseSerialColumn();
+      modelBuilder.Entity<User>().HasOne(p => p.Account);
+      modelBuilder.Entity<User>().HasData(BuildUser());
+      
+
     }
+    public List<DCard> BuildDeck()
+    {
+      List<DCard> cards = new List<DCard>();
+      var cardId = 1;
+      foreach (var suit in new[] { "Spades", "Hearts", "Clubs", "Diamonds", })
+      {
+        for (var Value = 2; Value <= 14; Value++)
+        {
+          cards.Add(new DCard(cardId, Value, suit));
+          cardId++;
+        }
+      }
+      return cards;
+    }
+    public List<DAccount> BuildAccount()
+    {
+      return new List<DAccount>(){
+      new DAccount(){AccountId=1,UserName="Simar",Password="Pannu"},
+      new DAccount(){AccountId=2,UserName="Han",Password="Nguyen"},
+      new DAccount(){AccountId=3,UserName="James",Password="Goldsmith"}};
+
+    }
+    public List<DUser> BuildUser()
+    {
+      return new List<DUser>(){
+      new DUser(){UserId =1, FirstName="Simar", LastName="Pannu", ChipTotal=5000, AccountId = 1},
+      new DUser(){UserId =2, FirstName="Han", LastName="Nguyen", ChipTotal=5000, AccountId= 2},
+      new DUser(){UserId =3, FirstName="James", LastName="Goldsmith", ChipTotal=5000, AccountId = 3 }};
+    }
+  }
 }
-}
+

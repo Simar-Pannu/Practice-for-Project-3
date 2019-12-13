@@ -1,6 +1,7 @@
 using HighStakes.Storing.Repositories;
 using Xunit;
-namespace HighStakes.Testing
+
+namespace HighStakes.Testing.StoringTests
 {
 public class StoringTests{
 

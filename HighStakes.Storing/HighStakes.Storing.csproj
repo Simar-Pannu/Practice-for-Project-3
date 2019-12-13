@@ -2,20 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <DebugType>Full</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.entityframeworkcore" Version="2.2.6" />
-    <PackageReference Include="microsoft.entityframeworkcore.design" Version="2.2.6" />
-    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.2.6" />
-    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="2.2.6">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <ProjectReference Include="..\HighStakes.Domain\HighStakes.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HighStakes.Domain\HighStakes.Domain.csproj" />
+    <PackageReference Include="npgsql.entityframeworkcore.postgresql" Version="3.1.0" />
+    <PackageReference Include="npgsql.entityframeworkcore.postgresql.design" Version="1.1.1" />
   </ItemGroup>
 
 </Project>
