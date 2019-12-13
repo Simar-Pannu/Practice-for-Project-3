@@ -1,0 +1,3504 @@
+{
+  "HighStakes.Domain.dll": {
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Account.cs": {
+      "HighStakes.Domain.Models.DAccount": {
+        "System.Int32 HighStakes.Domain.Models.DAccount::get_AccountId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Domain.Models.DAccount::get_UserName()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Domain.Models.DAccount::get_Password()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Card.cs": {
+      "HighStakes.Domain.Models.DCard": {
+        "System.Int32 HighStakes.Domain.Models.DCard::get_CardId()": {
+          "Lines": {
+            "5": 105
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DCard::get_Value()": {
+          "Lines": {
+            "6": 212
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Domain.Models.DCard::get_Suit()": {
+          "Lines": {
+            "7": 211
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Domain.Models.DCard::get_Name()": {
+          "Lines": {
+            "8": 106
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DCard::Initialize(System.Int32,System.String,System.String)": {
+          "Lines": {
+            "18": 105,
+            "19": 105,
+            "20": 105,
+            "21": 105,
+            "22": 105
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DCard::.ctor(System.Int32,System.Int32,System.String)": {
+          "Lines": {
+            "10": 105,
+            "11": 105,
+            "12": 105,
+            "13": 105,
+            "14": 105,
+            "15": 105
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Deck.cs": {
+      "HighStakes.Domain.Models.DDeck": {
+        "System.Int32 HighStakes.Domain.Models.DDeck::get_DeckId()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Domain.Models.DDeck::get_Cards()": {
+          "Lines": {
+            "9": 521
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DDeck::Initialize()": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "20": 56,
+            "21": 26,
+            "22": 26,
+            "23": 26,
+            "24": 26,
+            "25": 26,
+            "26": 26,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 26,
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "36": 2,
+            "37": 2,
+            "38": 24,
+            "39": 2,
+            "40": 2,
+            "41": 2,
+            "42": 2,
+            "43": 2,
+            "44": 22,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 20,
+            "51": 2,
+            "52": 2,
+            "53": 2,
+            "54": 2,
+            "55": 2,
+            "56": 18,
+            "57": 2,
+            "58": 2,
+            "59": 2,
+            "60": 2,
+            "61": 2,
+            "62": 16,
+            "63": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 2,
+            "68": 14,
+            "69": 2,
+            "70": 2,
+            "71": 2,
+            "72": 2,
+            "73": 2,
+            "74": 12,
+            "75": 2,
+            "76": 2,
+            "77": 2,
+            "78": 2,
+            "79": 2,
+            "80": 10,
+            "81": 2,
+            "82": 2,
+            "83": 2,
+            "84": 2,
+            "85": 2,
+            "86": 8,
+            "87": 2,
+            "88": 2,
+            "89": 2,
+            "90": 2,
+            "91": 2,
+            "92": 6,
+            "93": 2,
+            "94": 2,
+            "95": 2,
+            "96": 2,
+            "97": 2,
+            "98": 4,
+            "99": 2,
+            "100": 2,
+            "101": 2,
+            "102": 2,
+            "103": 2,
+            "104": 2,
+            "105": 26,
+            "106": 26,
+            "107": 26,
+            "108": 26,
+            "109": 26,
+            "111": 2,
+            "112": 2
+          },
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 1331,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 27,
+              "Hits": 26
+            },
+            {
+              "Line": 26,
+              "Offset": 82,
+              "EndOffset": 84,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 26,
+              "Offset": 82,
+              "EndOffset": 164,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 24
+            },
+            {
+              "Line": 32,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 172,
+              "EndOffset": 254,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 22
+            },
+            {
+              "Line": 38,
+              "Offset": 262,
+              "EndOffset": 264,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 38,
+              "Offset": 262,
+              "EndOffset": 344,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 20
+            },
+            {
+              "Line": 44,
+              "Offset": 352,
+              "EndOffset": 354,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 44,
+              "Offset": 352,
+              "EndOffset": 434,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 18
+            },
+            {
+              "Line": 50,
+              "Offset": 442,
+              "EndOffset": 444,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 2
+            },
+            {
+              "Line": 50,
+              "Offset": 442,
+              "EndOffset": 524,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 16
+            },
+            {
+              "Line": 56,
+              "Offset": 532,
+              "EndOffset": 534,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 2
+            },
+            {
+              "Line": 56,
+              "Offset": 532,
+              "EndOffset": 614,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 14
+            },
+            {
+              "Line": 62,
+              "Offset": 622,
+              "EndOffset": 624,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 2
+            },
+            {
+              "Line": 62,
+              "Offset": 622,
+              "EndOffset": 704,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 12
+            },
+            {
+              "Line": 68,
+              "Offset": 712,
+              "EndOffset": 714,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 2
+            },
+            {
+              "Line": 68,
+              "Offset": 712,
+              "EndOffset": 798,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 10
+            },
+            {
+              "Line": 74,
+              "Offset": 806,
+              "EndOffset": 808,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 2
+            },
+            {
+              "Line": 74,
+              "Offset": 806,
+              "EndOffset": 892,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 8
+            },
+            {
+              "Line": 80,
+              "Offset": 901,
+              "EndOffset": 903,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 2
+            },
+            {
+              "Line": 80,
+              "Offset": 901,
+              "EndOffset": 987,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 6
+            },
+            {
+              "Line": 86,
+              "Offset": 996,
+              "EndOffset": 998,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 2
+            },
+            {
+              "Line": 86,
+              "Offset": 996,
+              "EndOffset": 1082,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 4
+            },
+            {
+              "Line": 92,
+              "Offset": 1091,
+              "EndOffset": 1093,
+              "Path": 0,
+              "Ordinal": 22,
+              "Hits": 2
+            },
+            {
+              "Line": 92,
+              "Offset": 1091,
+              "EndOffset": 1174,
+              "Path": 1,
+              "Ordinal": 23,
+              "Hits": 2
+            },
+            {
+              "Line": 98,
+              "Offset": 1183,
+              "EndOffset": 1185,
+              "Path": 0,
+              "Ordinal": 24,
+              "Hits": 2
+            },
+            {
+              "Line": 98,
+              "Offset": 1183,
+              "EndOffset": 1264,
+              "Path": 1,
+              "Ordinal": 25,
+              "Hits": 26
+            },
+            {
+              "Line": 20,
+              "Offset": 1331,
+              "EndOffset": 1336,
+              "Path": 0,
+              "Ordinal": 26,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DDeck::Shuffle()": {
+          "Lines": {
+            "115": 2,
+            "116": 2,
+            "117": 2,
+            "118": 206,
+            "119": 102,
+            "120": 102,
+            "121": 102,
+            "122": 102,
+            "123": 102,
+            "124": 102,
+            "125": 2
+          },
+          "Branches": [
+            {
+              "Line": 118,
+              "Offset": 97,
+              "EndOffset": 21,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 102
+            },
+            {
+              "Line": 118,
+              "Offset": 97,
+              "EndOffset": 99,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            }
+          ]
+        },
+        "HighStakes.Domain.Models.DCard HighStakes.Domain.Models.DDeck::Draw()": {
+          "Lines": {
+            "128": 1,
+            "129": 1,
+            "130": 1,
+            "131": 1,
+            "132": 1
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DDeck::.ctor(System.Int32,System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Hand.cs": {
+      "HighStakes.Domain.Models.DHand": {
+        "System.Int32 HighStakes.Domain.Models.DHand::get_HandId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Domain.Models.DHand::get_HandCards()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DHand::get_HandValue()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DHand::Initialize()": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Pot.cs": {
+      "HighStakes.Domain.Models.DPot": {
+        "System.Int32 HighStakes.Domain.Models.DPot::get_PotId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DUser> HighStakes.Domain.Models.DPot::get_PossibleWinners()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DPot::get_PotValue()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DPot::get_Active()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DPot::get_AllInValue()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DPot::Initialize()": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Seat.cs": {
+      "HighStakes.Domain.Models.DSeat": {
+        "System.Int32 HighStakes.Domain.Models.DSeat::get_SeatId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Domain.Models.DUser HighStakes.Domain.Models.DSeat::get_Player()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DSeat::get_ChipTotal()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Domain.Models.DSeat::get_Pocket()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Domain.Models.DHand HighStakes.Domain.Models.DSeat::get_PlayerHand()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::get_BigBlind()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::get_SmallBlind()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::get_Dealer()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::get_Occupied()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DSeat::get_RoundBid()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::get_AllIn()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::get_Active()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DSeat::get_HandValue()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::Initialize()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::NewRound()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::Bid(System.Int32)": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": [
+            {
+              "Line": 51,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 12,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::Fold()": {
+          "Lines": {
+            "63": 0,
+            "64": 0,
+            "65": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::SitDown(HighStakes.Domain.Models.DUser,System.Int32)": {
+          "Lines": {
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::StandUp()": {
+          "Lines": {
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::FindBestHand()": {
+          "Lines": {
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "239": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "273": 0,
+            "274": 0,
+            "275": 0,
+            "276": 0,
+            "278": 0,
+            "279": 0,
+            "280": 0,
+            "281": 0,
+            "282": 0,
+            "284": 0,
+            "285": 0,
+            "286": 0,
+            "287": 0,
+            "288": 0,
+            "289": 0,
+            "290": 0,
+            "291": 0,
+            "293": 0,
+            "294": 0,
+            "295": 0,
+            "296": 0,
+            "297": 0,
+            "299": 0,
+            "300": 0,
+            "301": 0,
+            "302": 0,
+            "303": 0,
+            "304": 0,
+            "305": 0,
+            "306": 0,
+            "308": 0,
+            "309": 0,
+            "310": 0,
+            "311": 0,
+            "312": 0,
+            "314": 0,
+            "315": 0,
+            "316": 0,
+            "317": 0,
+            "318": 0,
+            "319": 0,
+            "320": 0,
+            "321": 0,
+            "323": 0,
+            "324": 0,
+            "325": 0,
+            "326": 0,
+            "327": 0,
+            "329": 0,
+            "330": 0,
+            "331": 0,
+            "332": 0,
+            "333": 0,
+            "334": 0,
+            "335": 0,
+            "336": 0,
+            "338": 0,
+            "339": 0,
+            "340": 0,
+            "341": 0,
+            "342": 0,
+            "344": 0,
+            "345": 0,
+            "346": 0,
+            "347": 0,
+            "348": 0,
+            "349": 0,
+            "350": 0,
+            "351": 0,
+            "353": 0,
+            "354": 0,
+            "355": 0,
+            "356": 0,
+            "357": 0,
+            "359": 0,
+            "360": 0,
+            "361": 0,
+            "362": 0,
+            "363": 0,
+            "364": 0,
+            "365": 0,
+            "366": 0,
+            "368": 0,
+            "369": 0,
+            "370": 0,
+            "371": 0,
+            "372": 0,
+            "374": 0,
+            "375": 0,
+            "376": 0,
+            "377": 0,
+            "378": 0,
+            "379": 0,
+            "380": 0,
+            "381": 0,
+            "383": 0,
+            "384": 0,
+            "385": 0,
+            "386": 0,
+            "387": 0,
+            "389": 0,
+            "390": 0,
+            "391": 0,
+            "392": 0,
+            "393": 0,
+            "394": 0,
+            "395": 0,
+            "396": 0,
+            "398": 0,
+            "399": 0,
+            "400": 0,
+            "401": 0,
+            "402": 0,
+            "404": 0,
+            "405": 0,
+            "406": 0,
+            "407": 0,
+            "408": 0,
+            "409": 0,
+            "410": 0,
+            "411": 0,
+            "413": 0,
+            "414": 0,
+            "415": 0,
+            "416": 0,
+            "417": 0,
+            "418": 0,
+            "419": 0,
+            "420": 0,
+            "421": 0
+          },
+          "Branches": [
+            {
+              "Line": 102,
+              "Offset": 67,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 102,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 106,
+              "Offset": 129,
+              "EndOffset": 102,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 106,
+              "Offset": 129,
+              "EndOffset": 131,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 155,
+              "EndOffset": 157,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 155,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 128,
+              "Offset": 381,
+              "EndOffset": 383,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 128,
+              "Offset": 381,
+              "EndOffset": 395,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 502,
+              "EndOffset": 504,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 502,
+              "EndOffset": 516,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 158,
+              "Offset": 623,
+              "EndOffset": 625,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 158,
+              "Offset": 623,
+              "EndOffset": 637,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 173,
+              "Offset": 744,
+              "EndOffset": 746,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 173,
+              "Offset": 744,
+              "EndOffset": 758,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 188,
+              "Offset": 865,
+              "EndOffset": 867,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 188,
+              "Offset": 865,
+              "EndOffset": 879,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 203,
+              "Offset": 986,
+              "EndOffset": 988,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 203,
+              "Offset": 986,
+              "EndOffset": 1000,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 218,
+              "Offset": 1107,
+              "EndOffset": 1109,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 218,
+              "Offset": 1107,
+              "EndOffset": 1121,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 233,
+              "Offset": 1228,
+              "EndOffset": 1230,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 233,
+              "Offset": 1228,
+              "EndOffset": 1242,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 0
+            },
+            {
+              "Line": 248,
+              "Offset": 1349,
+              "EndOffset": 1351,
+              "Path": 0,
+              "Ordinal": 22,
+              "Hits": 0
+            },
+            {
+              "Line": 248,
+              "Offset": 1349,
+              "EndOffset": 1363,
+              "Path": 1,
+              "Ordinal": 23,
+              "Hits": 0
+            },
+            {
+              "Line": 263,
+              "Offset": 1470,
+              "EndOffset": 1472,
+              "Path": 0,
+              "Ordinal": 24,
+              "Hits": 0
+            },
+            {
+              "Line": 263,
+              "Offset": 1470,
+              "EndOffset": 1484,
+              "Path": 1,
+              "Ordinal": 25,
+              "Hits": 0
+            },
+            {
+              "Line": 278,
+              "Offset": 1591,
+              "EndOffset": 1593,
+              "Path": 0,
+              "Ordinal": 26,
+              "Hits": 0
+            },
+            {
+              "Line": 278,
+              "Offset": 1591,
+              "EndOffset": 1605,
+              "Path": 1,
+              "Ordinal": 27,
+              "Hits": 0
+            },
+            {
+              "Line": 293,
+              "Offset": 1712,
+              "EndOffset": 1714,
+              "Path": 0,
+              "Ordinal": 28,
+              "Hits": 0
+            },
+            {
+              "Line": 293,
+              "Offset": 1712,
+              "EndOffset": 1726,
+              "Path": 1,
+              "Ordinal": 29,
+              "Hits": 0
+            },
+            {
+              "Line": 308,
+              "Offset": 1833,
+              "EndOffset": 1835,
+              "Path": 0,
+              "Ordinal": 30,
+              "Hits": 0
+            },
+            {
+              "Line": 308,
+              "Offset": 1833,
+              "EndOffset": 1847,
+              "Path": 1,
+              "Ordinal": 31,
+              "Hits": 0
+            },
+            {
+              "Line": 323,
+              "Offset": 1954,
+              "EndOffset": 1956,
+              "Path": 0,
+              "Ordinal": 32,
+              "Hits": 0
+            },
+            {
+              "Line": 323,
+              "Offset": 1954,
+              "EndOffset": 1968,
+              "Path": 1,
+              "Ordinal": 33,
+              "Hits": 0
+            },
+            {
+              "Line": 338,
+              "Offset": 2075,
+              "EndOffset": 2077,
+              "Path": 0,
+              "Ordinal": 34,
+              "Hits": 0
+            },
+            {
+              "Line": 338,
+              "Offset": 2075,
+              "EndOffset": 2089,
+              "Path": 1,
+              "Ordinal": 35,
+              "Hits": 0
+            },
+            {
+              "Line": 353,
+              "Offset": 2196,
+              "EndOffset": 2198,
+              "Path": 0,
+              "Ordinal": 36,
+              "Hits": 0
+            },
+            {
+              "Line": 353,
+              "Offset": 2196,
+              "EndOffset": 2210,
+              "Path": 1,
+              "Ordinal": 37,
+              "Hits": 0
+            },
+            {
+              "Line": 368,
+              "Offset": 2317,
+              "EndOffset": 2319,
+              "Path": 0,
+              "Ordinal": 38,
+              "Hits": 0
+            },
+            {
+              "Line": 368,
+              "Offset": 2317,
+              "EndOffset": 2331,
+              "Path": 1,
+              "Ordinal": 39,
+              "Hits": 0
+            },
+            {
+              "Line": 383,
+              "Offset": 2438,
+              "EndOffset": 2440,
+              "Path": 0,
+              "Ordinal": 40,
+              "Hits": 0
+            },
+            {
+              "Line": 383,
+              "Offset": 2438,
+              "EndOffset": 2452,
+              "Path": 1,
+              "Ordinal": 41,
+              "Hits": 0
+            },
+            {
+              "Line": 398,
+              "Offset": 2559,
+              "EndOffset": 2561,
+              "Path": 0,
+              "Ordinal": 42,
+              "Hits": 0
+            },
+            {
+              "Line": 398,
+              "Offset": 2559,
+              "EndOffset": 2573,
+              "Path": 1,
+              "Ordinal": 43,
+              "Hits": 0
+            },
+            {
+              "Line": 413,
+              "Offset": 2680,
+              "EndOffset": 2682,
+              "Path": 0,
+              "Ordinal": 44,
+              "Hits": 0
+            },
+            {
+              "Line": 413,
+              "Offset": 2680,
+              "EndOffset": 2694,
+              "Path": 1,
+              "Ordinal": 45,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsPair(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "424": 0,
+            "425": 0,
+            "426": 0
+          },
+          "Branches": [
+            {
+              "Line": 425,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 425,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 425,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 425,
+              "Offset": 44,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsTwoPair(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "429": 0,
+            "430": 0,
+            "431": 0
+          },
+          "Branches": [
+            {
+              "Line": 430,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 430,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 430,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 430,
+              "Offset": 44,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsThreeOfAKind(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "434": 0,
+            "435": 0,
+            "436": 0
+          },
+          "Branches": [
+            {
+              "Line": 435,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 435,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 435,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 435,
+              "Offset": 44,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsFourOfAKind(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "439": 0,
+            "440": 0,
+            "441": 0
+          },
+          "Branches": [
+            {
+              "Line": 440,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 440,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 440,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 440,
+              "Offset": 44,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsFlush(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "444": 0,
+            "445": 0,
+            "446": 0
+          },
+          "Branches": [
+            {
+              "Line": 445,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 445,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 445,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 445,
+              "Offset": 44,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsFullHouse(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "449": 0,
+            "450": 0,
+            "451": 0
+          },
+          "Branches": [
+            {
+              "Line": 450,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 450,
+              "Offset": 8,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsStraight(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "454": 0,
+            "455": 0,
+            "456": 0,
+            "457": 0,
+            "458": 0,
+            "459": 0,
+            "460": 0,
+            "461": 0,
+            "462": 0,
+            "463": 0,
+            "464": 0,
+            "465": 0,
+            "467": 0,
+            "468": 0,
+            "469": 0,
+            "470": 0,
+            "471": 0
+          },
+          "Branches": [
+            {
+              "Line": 455,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 455,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 457,
+              "Offset": 126,
+              "EndOffset": 56,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 459,
+              "Offset": 73,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 459,
+              "Offset": 73,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 463,
+              "Offset": 105,
+              "EndOffset": 107,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 463,
+              "Offset": 105,
+              "EndOffset": 113,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 457,
+              "Offset": 126,
+              "EndOffset": 128,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsStraightFlush(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "474": 0,
+            "475": 0,
+            "476": 0
+          },
+          "Branches": [
+            {
+              "Line": 475,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 475,
+              "Offset": 8,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DSeat::IsRoyalStraightFlush(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "479": 0,
+            "480": 0,
+            "481": 0
+          },
+          "Branches": [
+            {
+              "Line": 480,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 480,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 480,
+              "Offset": 17,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 480,
+              "Offset": 8,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DSeat::AssignHandValue(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
+          "Lines": {
+            "484": 0,
+            "485": 0,
+            "486": 0,
+            "487": 0,
+            "488": 0,
+            "489": 0,
+            "490": 0,
+            "491": 0,
+            "492": 0,
+            "493": 0,
+            "494": 0,
+            "495": 0,
+            "496": 0,
+            "497": 0,
+            "498": 0,
+            "499": 0,
+            "500": 0,
+            "501": 0,
+            "502": 0,
+            "503": 0,
+            "505": 0,
+            "506": 0,
+            "507": 0,
+            "508": 0,
+            "509": 0,
+            "510": 0,
+            "511": 0,
+            "512": 0,
+            "513": 0,
+            "514": 0,
+            "515": 0,
+            "516": 0,
+            "517": 0,
+            "518": 0,
+            "519": 0,
+            "520": 0,
+            "521": 0,
+            "522": 0,
+            "523": 0,
+            "524": 0,
+            "525": 0,
+            "526": 0,
+            "527": 0
+          },
+          "Branches": [
+            {
+              "Line": 485,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 485,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 486,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 486,
+              "Offset": 53,
+              "EndOffset": 79,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 489,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 489,
+              "Offset": 88,
+              "EndOffset": 145,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 493,
+              "Offset": 154,
+              "EndOffset": 156,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 496,
+              "Offset": 229,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 496,
+              "Offset": 229,
+              "EndOffset": 231,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 493,
+              "Offset": 154,
+              "EndOffset": 254,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 500,
+              "Offset": 265,
+              "EndOffset": 267,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 500,
+              "Offset": 265,
+              "EndOffset": 322,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 505,
+              "Offset": 333,
+              "EndOffset": 335,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 505,
+              "Offset": 333,
+              "EndOffset": 390,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 509,
+              "Offset": 401,
+              "EndOffset": 403,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 509,
+              "Offset": 401,
+              "EndOffset": 458,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 513,
+              "Offset": 469,
+              "EndOffset": 471,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 513,
+              "Offset": 469,
+              "EndOffset": 523,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 517,
+              "Offset": 534,
+              "EndOffset": 536,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 517,
+              "Offset": 534,
+              "EndOffset": 557,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 520,
+              "Offset": 568,
+              "EndOffset": 570,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 520,
+              "Offset": 568,
+              "EndOffset": 588,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\Table.cs": {
+      "HighStakes.Domain.Models.DTable": {
+        "System.Int32 HighStakes.Domain.Models.DTable::get_TableId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DSeat> HighStakes.Domain.Models.DTable::get_Seats()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Domain.Models.DDeck HighStakes.Domain.Models.DTable::get_DeckOfCards()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Domain.Models.DPot HighStakes.Domain.Models.DTable::get_CurrentPot()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DPot> HighStakes.Domain.Models.DTable::get_SidePots()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DTable::get_SmallBlindAmount()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DTable::get_BigBlindAmount()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DSeat> HighStakes.Domain.Models.DTable::get_SeatsInTurnOrder()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean HighStakes.Domain.Models.DTable::get_RoundStarted()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DTable::Initialize(System.Int32,System.Int32)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 127,
+              "EndOffset": 89,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DTable::JoinGame(HighStakes.Domain.Models.DUser,System.Int32)": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 96,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 71,
+              "EndOffset": 83,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 36,
+              "EndOffset": 88,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 96,
+              "EndOffset": 98,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 HighStakes.Domain.Models.DTable::NumOfActivePlayers()": {
+          "Lines": {
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 58,
+              "Offset": 49,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 35,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 49,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HighStakes.Domain.Models.DTable::StartGame()": {
+          "Lines": {
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": [
+            {
+              "Line": 76,
+              "Offset": 30,
+              "EndOffset": 35,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 230,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 67,
+              "EndOffset": 72,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 81,
+              "EndOffset": 83,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 114,
+              "EndOffset": 116,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 114,
+              "EndOffset": 140,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 81,
+              "EndOffset": 143,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 91,
+              "Offset": 151,
+              "EndOffset": 153,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 91,
+              "Offset": 151,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 95,
+              "Offset": 187,
+              "EndOffset": 189,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 95,
+              "Offset": 187,
+              "EndOffset": 213,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 67,
+              "EndOffset": 214,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 230,
+              "EndOffset": 235,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 30,
+              "EndOffset": 240,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DTable::GetTurnOrder()": {
+          "Lines": {
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0
+          },
+          "Branches": [
+            {
+              "Line": 111,
+              "Offset": 72,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 47,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 111,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 118,
+              "Offset": 183,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 120,
+              "Offset": 108,
+              "EndOffset": 110,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 120,
+              "Offset": 108,
+              "EndOffset": 114,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 124,
+              "Offset": 135,
+              "EndOffset": 137,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 124,
+              "Offset": 135,
+              "EndOffset": 163,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 118,
+              "Offset": 183,
+              "EndOffset": 185,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DTable::EndRound()": {
+          "Lines": {
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "216": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "238": 0,
+            "239": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "274": 0,
+            "275": 0,
+            "276": 0,
+            "277": 0,
+            "278": 0,
+            "279": 0,
+            "280": 0,
+            "281": 0,
+            "282": 0,
+            "284": 0,
+            "285": 0,
+            "286": 0,
+            "287": 0,
+            "288": 0,
+            "289": 0,
+            "290": 0,
+            "291": 0,
+            "292": 0,
+            "293": 0,
+            "294": 0,
+            "295": 0,
+            "296": 0,
+            "297": 0,
+            "298": 0,
+            "299": 0,
+            "300": 0,
+            "302": 0,
+            "303": 0
+          },
+          "Branches": [
+            {
+              "Line": 141,
+              "Offset": 120,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 80,
+              "EndOffset": 82,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 71,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 80,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 99,
+              "EndOffset": 112,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 141,
+              "Offset": 120,
+              "EndOffset": 122,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 148,
+              "Offset": 198,
+              "EndOffset": 155,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 150,
+              "Offset": 176,
+              "EndOffset": 178,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 150,
+              "Offset": 176,
+              "EndOffset": 190,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 148,
+              "Offset": 198,
+              "EndOffset": 200,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 155,
+              "Offset": 230,
+              "EndOffset": 232,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 155,
+              "Offset": 230,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 161,
+              "Offset": 303,
+              "EndOffset": 277,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 161,
+              "Offset": 303,
+              "EndOffset": 305,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 300,
+              "Offset": 2027,
+              "EndOffset": 322,
+              "Path": 1,
+              "Ordinal": 77,
+              "Hits": 0
+            },
+            {
+              "Line": 166,
+              "Offset": 330,
+              "EndOffset": 332,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 166,
+              "Offset": 330,
+              "EndOffset": 355,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 167,
+              "Offset": 396,
+              "EndOffset": 401,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 170,
+              "Offset": 488,
+              "EndOffset": 415,
+              "Path": 1,
+              "Ordinal": 23,
+              "Hits": 0
+            },
+            {
+              "Line": 172,
+              "Offset": 447,
+              "EndOffset": 449,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 172,
+              "Offset": 447,
+              "EndOffset": 467,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 0
+            },
+            {
+              "Line": 170,
+              "Offset": 488,
+              "EndOffset": 490,
+              "Path": 0,
+              "Ordinal": 22,
+              "Hits": 0
+            },
+            {
+              "Line": 177,
+              "Offset": 504,
+              "EndOffset": 506,
+              "Path": 0,
+              "Ordinal": 24,
+              "Hits": 0
+            },
+            {
+              "Line": 177,
+              "Offset": 504,
+              "EndOffset": 533,
+              "Path": 1,
+              "Ordinal": 25,
+              "Hits": 0
+            },
+            {
+              "Line": 182,
+              "Offset": 614,
+              "EndOffset": 546,
+              "Path": 1,
+              "Ordinal": 27,
+              "Hits": 0
+            },
+            {
+              "Line": 182,
+              "Offset": 614,
+              "EndOffset": 616,
+              "Path": 0,
+              "Ordinal": 26,
+              "Hits": 0
+            },
+            {
+              "Line": 167,
+              "Offset": 396,
+              "EndOffset": 677,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 197,
+              "Offset": 779,
+              "EndOffset": 706,
+              "Path": 1,
+              "Ordinal": 31,
+              "Hits": 0
+            },
+            {
+              "Line": 199,
+              "Offset": 738,
+              "EndOffset": 740,
+              "Path": 0,
+              "Ordinal": 28,
+              "Hits": 0
+            },
+            {
+              "Line": 199,
+              "Offset": 738,
+              "EndOffset": 758,
+              "Path": 1,
+              "Ordinal": 29,
+              "Hits": 0
+            },
+            {
+              "Line": 197,
+              "Offset": 779,
+              "EndOffset": 781,
+              "Path": 0,
+              "Ordinal": 30,
+              "Hits": 0
+            },
+            {
+              "Line": 205,
+              "Offset": 976,
+              "EndOffset": 789,
+              "Path": 1,
+              "Ordinal": 39,
+              "Hits": 0
+            },
+            {
+              "Line": 207,
+              "Offset": 859,
+              "EndOffset": 802,
+              "Path": 1,
+              "Ordinal": 33,
+              "Hits": 0
+            },
+            {
+              "Line": 207,
+              "Offset": 859,
+              "EndOffset": 861,
+              "Path": 0,
+              "Ordinal": 32,
+              "Hits": 0
+            },
+            {
+              "Line": 211,
+              "Offset": 886,
+              "EndOffset": 888,
+              "Path": 0,
+              "Ordinal": 34,
+              "Hits": 0
+            },
+            {
+              "Line": 211,
+              "Offset": 886,
+              "EndOffset": 911,
+              "Path": 1,
+              "Ordinal": 35,
+              "Hits": 0
+            },
+            {
+              "Line": 212,
+              "Offset": 955,
+              "EndOffset": 957,
+              "Path": 0,
+              "Ordinal": 36,
+              "Hits": 0
+            },
+            {
+              "Line": 212,
+              "Offset": 955,
+              "EndOffset": 960,
+              "Path": 1,
+              "Ordinal": 37,
+              "Hits": 0
+            },
+            {
+              "Line": 205,
+              "Offset": 976,
+              "EndOffset": 981,
+              "Path": 0,
+              "Ordinal": 38,
+              "Hits": 0
+            },
+            {
+              "Line": 218,
+              "Offset": 1013,
+              "EndOffset": 1018,
+              "Path": 0,
+              "Ordinal": 40,
+              "Hits": 0
+            },
+            {
+              "Line": 220,
+              "Offset": 1026,
+              "EndOffset": 1028,
+              "Path": 0,
+              "Ordinal": 42,
+              "Hits": 0
+            },
+            {
+              "Line": 220,
+              "Offset": 1026,
+              "EndOffset": 1051,
+              "Path": 1,
+              "Ordinal": 43,
+              "Hits": 0
+            },
+            {
+              "Line": 222,
+              "Offset": 1148,
+              "EndOffset": 1075,
+              "Path": 1,
+              "Ordinal": 47,
+              "Hits": 0
+            },
+            {
+              "Line": 224,
+              "Offset": 1107,
+              "EndOffset": 1109,
+              "Path": 0,
+              "Ordinal": 44,
+              "Hits": 0
+            },
+            {
+              "Line": 224,
+              "Offset": 1107,
+              "EndOffset": 1127,
+              "Path": 1,
+              "Ordinal": 45,
+              "Hits": 0
+            },
+            {
+              "Line": 222,
+              "Offset": 1148,
+              "EndOffset": 1150,
+              "Path": 0,
+              "Ordinal": 46,
+              "Hits": 0
+            },
+            {
+              "Line": 229,
+              "Offset": 1164,
+              "EndOffset": 1166,
+              "Path": 0,
+              "Ordinal": 48,
+              "Hits": 0
+            },
+            {
+              "Line": 229,
+              "Offset": 1164,
+              "EndOffset": 1194,
+              "Path": 1,
+              "Ordinal": 49,
+              "Hits": 0
+            },
+            {
+              "Line": 233,
+              "Offset": 1275,
+              "EndOffset": 1207,
+              "Path": 1,
+              "Ordinal": 51,
+              "Hits": 0
+            },
+            {
+              "Line": 233,
+              "Offset": 1275,
+              "EndOffset": 1277,
+              "Path": 0,
+              "Ordinal": 50,
+              "Hits": 0
+            },
+            {
+              "Line": 243,
+              "Offset": 1368,
+              "EndOffset": 1342,
+              "Path": 1,
+              "Ordinal": 53,
+              "Hits": 0
+            },
+            {
+              "Line": 243,
+              "Offset": 1368,
+              "EndOffset": 1370,
+              "Path": 0,
+              "Ordinal": 52,
+              "Hits": 0
+            },
+            {
+              "Line": 218,
+              "Offset": 1013,
+              "EndOffset": 1394,
+              "Path": 1,
+              "Ordinal": 41,
+              "Hits": 0
+            },
+            {
+              "Line": 250,
+              "Offset": 1403,
+              "EndOffset": 1405,
+              "Path": 0,
+              "Ordinal": 54,
+              "Hits": 0
+            },
+            {
+              "Line": 250,
+              "Offset": 1403,
+              "EndOffset": 1428,
+              "Path": 1,
+              "Ordinal": 55,
+              "Hits": 0
+            },
+            {
+              "Line": 254,
+              "Offset": 1544,
+              "EndOffset": 1468,
+              "Path": 1,
+              "Ordinal": 59,
+              "Hits": 0
+            },
+            {
+              "Line": 256,
+              "Offset": 1502,
+              "EndOffset": 1504,
+              "Path": 0,
+              "Ordinal": 56,
+              "Hits": 0
+            },
+            {
+              "Line": 256,
+              "Offset": 1502,
+              "EndOffset": 1522,
+              "Path": 1,
+              "Ordinal": 57,
+              "Hits": 0
+            },
+            {
+              "Line": 254,
+              "Offset": 1544,
+              "EndOffset": 1546,
+              "Path": 0,
+              "Ordinal": 58,
+              "Hits": 0
+            },
+            {
+              "Line": 261,
+              "Offset": 1554,
+              "EndOffset": 1556,
+              "Path": 0,
+              "Ordinal": 60,
+              "Hits": 0
+            },
+            {
+              "Line": 261,
+              "Offset": 1554,
+              "EndOffset": 1579,
+              "Path": 1,
+              "Ordinal": 61,
+              "Hits": 0
+            },
+            {
+              "Line": 264,
+              "Offset": 1678,
+              "EndOffset": 1604,
+              "Path": 1,
+              "Ordinal": 65,
+              "Hits": 0
+            },
+            {
+              "Line": 266,
+              "Offset": 1637,
+              "EndOffset": 1639,
+              "Path": 0,
+              "Ordinal": 62,
+              "Hits": 0
+            },
+            {
+              "Line": 266,
+              "Offset": 1637,
+              "EndOffset": 1657,
+              "Path": 1,
+              "Ordinal": 63,
+              "Hits": 0
+            },
+            {
+              "Line": 264,
+              "Offset": 1678,
+              "EndOffset": 1680,
+              "Path": 0,
+              "Ordinal": 64,
+              "Hits": 0
+            },
+            {
+              "Line": 271,
+              "Offset": 1694,
+              "EndOffset": 1696,
+              "Path": 0,
+              "Ordinal": 66,
+              "Hits": 0
+            },
+            {
+              "Line": 274,
+              "Offset": 1713,
+              "EndOffset": 1715,
+              "Path": 0,
+              "Ordinal": 68,
+              "Hits": 0
+            },
+            {
+              "Line": 274,
+              "Offset": 1713,
+              "EndOffset": 1739,
+              "Path": 1,
+              "Ordinal": 69,
+              "Hits": 0
+            },
+            {
+              "Line": 278,
+              "Offset": 1793,
+              "EndOffset": 1751,
+              "Path": 1,
+              "Ordinal": 71,
+              "Hits": 0
+            },
+            {
+              "Line": 278,
+              "Offset": 1793,
+              "EndOffset": 1795,
+              "Path": 0,
+              "Ordinal": 70,
+              "Hits": 0
+            },
+            {
+              "Line": 271,
+              "Offset": 1694,
+              "EndOffset": 1818,
+              "Path": 1,
+              "Ordinal": 67,
+              "Hits": 0
+            },
+            {
+              "Line": 284,
+              "Offset": 1901,
+              "EndOffset": 1831,
+              "Path": 1,
+              "Ordinal": 73,
+              "Hits": 0
+            },
+            {
+              "Line": 284,
+              "Offset": 1901,
+              "EndOffset": 1903,
+              "Path": 0,
+              "Ordinal": 72,
+              "Hits": 0
+            },
+            {
+              "Line": 290,
+              "Offset": 1978,
+              "EndOffset": 1936,
+              "Path": 1,
+              "Ordinal": 75,
+              "Hits": 0
+            },
+            {
+              "Line": 290,
+              "Offset": 1978,
+              "EndOffset": 1980,
+              "Path": 0,
+              "Ordinal": 74,
+              "Hits": 0
+            },
+            {
+              "Line": 300,
+              "Offset": 2027,
+              "EndOffset": 2032,
+              "Path": 0,
+              "Ordinal": 76,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DTable::MoveBlinds()": {
+          "Lines": {
+            "306": 0,
+            "307": 0,
+            "308": 0,
+            "309": 0,
+            "310": 0,
+            "311": 0,
+            "312": 0,
+            "313": 0,
+            "314": 0,
+            "315": 0,
+            "316": 0,
+            "317": 0,
+            "318": 0,
+            "319": 0,
+            "320": 0,
+            "321": 0,
+            "322": 0,
+            "323": 0
+          },
+          "Branches": [
+            {
+              "Line": 308,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 308,
+              "Offset": 24,
+              "EndOffset": 106,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 314,
+              "Offset": 122,
+              "EndOffset": 124,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 314,
+              "Offset": 122,
+              "EndOffset": 204,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HighStakes.Domain.Models.DTable::EndGame()": {
+          "Lines": {
+            "326": 0,
+            "328": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Domain.Models.DTable::StartRound()": {
+          "Lines": {
+            "331": 0,
+            "332": 0,
+            "334": 0,
+            "335": 0,
+            "336": 0,
+            "337": 0,
+            "338": 0,
+            "339": 0,
+            "340": 0,
+            "341": 0,
+            "342": 0,
+            "343": 0,
+            "344": 0,
+            "346": 0,
+            "348": 0,
+            "349": 0,
+            "350": 0,
+            "351": 0,
+            "353": 0,
+            "354": 0,
+            "355": 0,
+            "356": 0,
+            "357": 0,
+            "358": 0,
+            "359": 0,
+            "360": 0
+          },
+          "Branches": [
+            {
+              "Line": 334,
+              "Offset": 95,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 336,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 336,
+              "Offset": 45,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 340,
+              "Offset": 70,
+              "EndOffset": 72,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 340,
+              "Offset": 70,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 334,
+              "Offset": 95,
+              "EndOffset": 97,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 348,
+              "Offset": 163,
+              "EndOffset": 137,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 348,
+              "Offset": 163,
+              "EndOffset": 165,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 353,
+              "Offset": 281,
+              "EndOffset": 187,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 355,
+              "Offset": 246,
+              "EndOffset": 204,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 355,
+              "Offset": 246,
+              "EndOffset": 248,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 353,
+              "Offset": 281,
+              "EndOffset": 283,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Models\\User.cs": {
+      "HighStakes.Domain.Models.DUser": {
+        "System.Int32 HighStakes.Domain.Models.DUser::get_UserId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DUser::get_AccountId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "HighStakes.Domain.Models.DAccount HighStakes.Domain.Models.DUser::get_Account()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Domain.Models.DUser::get_FirstName()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String HighStakes.Domain.Models.DUser::get_LastName()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 HighStakes.Domain.Models.DUser::get_ChipTotal()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Domain\\Abstracts\\AGame.cs": {
+      "HighStakes.Domain.Abstracts.AGame": {
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Domain.Abstracts.AGame::get_Flop()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "HighStakes.Storing.dll": {}
+}
