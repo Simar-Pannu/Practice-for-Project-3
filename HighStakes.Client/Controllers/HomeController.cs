@@ -96,8 +96,9 @@ namespace HighStakes.Client.Controllers
       }
 
       // HighStakesContext _hsc = new HighStakesContext();
-      UserRepository.Create();
-      User loginUser = UserRepository.GetUsers().FirstOrDefault(o => o.Account.UserName == player.username && o.Account.Password == player.password);
+      // UserRepository.Create();
+      UserRepository _ur = new UserRepository();
+      DUser loginUser = _ur.GetUsers().FirstOrDefault(o => o.Account.UserName == player.username && o.Account.Password == player.password);
 
       if (loginUser == null)
       {
@@ -170,26 +171,6 @@ namespace HighStakes.Client.Controllers
       DataTemp.writeData(table);
       return "";
     }
-
-   [HttpPost]
-
-    public IActionResult PostPokemon(Pokemon poke)
-    {
-      if (ModelState.IsValid)
-      {
-        Console.Write("Out 1: ");
-        Console.WriteLine(poke.name);
-        return View("Index");
-      }
-        Console.Write("Out 2: ");
-        Console.WriteLine(poke.name);
-      return View("Index");
-    }
-
-
-
-
-
 
     public IActionResult Privacy()
     {

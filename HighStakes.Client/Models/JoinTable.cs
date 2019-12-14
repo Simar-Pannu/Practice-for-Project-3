@@ -3,7 +3,6 @@ using System.Linq;
 using HighStakes.Domain.Models;
 using HighStakes.Storing.Entities;
 using HighStakes.Storing.Repositories;
-using PizzaBox.Client.Validations;
 
 namespace HighStakes.Client.Models
 {
@@ -19,16 +18,11 @@ namespace HighStakes.Client.Models
     // Duplicate codes, refactor later
     public void LoadUser()
     {
-      this.user = new DUser();
-      User storingUser = UserRepository.GetUsers().FirstOrDefault(o => o.UserId == this.userID);
-
-      this.user.UserId = storingUser.UserId;
-      this.user.FirstName = storingUser.FirstName;
-      this.user.LastName = storingUser.LastName;
-      this.user.ChipTotal = storingUser.ChipTotal;
-
-      DAccount account = new DAccount(){AccountId=storingUser.Account.AccountId, UserName=storingUser.Account.UserName, Password=storingUser.Account.Password};
-      this.user.Account = account;
+      // this.user = new DUser();
+      UserRepository _ur = new UserRepository();
+      // DUser storingUser = _ur.GetUsers().FirstOrDefault(o => o.UserId == this.userID);
+      DUser storingUser = _ur.GetUser(this.userID);
+      this.user = _ur.GetUser(this.userID);
     }
 
   }
