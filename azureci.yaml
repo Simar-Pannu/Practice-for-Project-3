@@ -2,7 +2,7 @@ name: $(date:yyyyMMdd)$(rev:.rr) #20191209.00
 
 trigger:
   - master  # triger the build if master changes
-  
+
 stages:
   - stage: compile
     jobs:
@@ -10,7 +10,11 @@ stages:
         pool:
           vmImage: ubuntu-18.04
         steps:
-          - script: dotnet build HighStakes.sln
+          - script: |
+              dotnet build HighStakes.sln
+              docker image pull postgres:alpine
+              docker container run -dit --rm --name postgres -p 5432:5432 postgres:alpine
+              dotnet ef migrations add --startup-project HighStakes.Client/HighStakes.Client.csproj --project HighStakes.Storing/HighStakes.Storing.csproj first-migration
   - stage: test
     jobs:
       - job: aspnet_test
@@ -61,7 +65,7 @@ stages:
               DOCKER_USER: $(DOCKER_USER)
           - script: docker image push sspannu/HighStakes:$BUILD_NAME
             env:
-              BUILD_NAME: $(Build.DefinitionName) 
+              BUILD_NAME: $(Build.DefinitionName)
 
 
 
