@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HighStakes.Storing.Migrations
 {
     [DbContext(typeof(HighStakesContext))]
-    [Migration("20191214013819_first-mirgration")]
-    partial class firstmirgration
+    [Migration("20191214215849_Last-Migration")]
+    partial class LastMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,7 @@ namespace HighStakes.Storing.Migrations
 
                     b.HasKey("AccountId");
 
-                    b.ToTable("DAccount");
+                    b.ToTable("Account");
 
                     b.HasData(
                         new
@@ -77,7 +77,7 @@ namespace HighStakes.Storing.Migrations
 
                     b.HasKey("CardId");
 
-                    b.ToTable("DCard");
+                    b.ToTable("Card");
 
                     b.HasData(
                         new
@@ -417,12 +417,13 @@ namespace HighStakes.Storing.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("DUser");
+                    b.ToTable("User");
 
                     b.HasData(
                         new
                         {
                             UserId = 1,
+                            AccountId = 1,
                             ChipTotal = 5000,
                             FirstName = "Simar",
                             LastName = "Pannu"
@@ -430,6 +431,7 @@ namespace HighStakes.Storing.Migrations
                         new
                         {
                             UserId = 2,
+                            AccountId = 2,
                             ChipTotal = 5000,
                             FirstName = "Han",
                             LastName = "Nguyen"
@@ -437,87 +439,16 @@ namespace HighStakes.Storing.Migrations
                         new
                         {
                             UserId = 3,
+                            AccountId = 3,
                             ChipTotal = 5000,
                             FirstName = "James",
                             LastName = "Goldsmith"
                         });
                 });
 
-            modelBuilder.Entity("HighStakes.Storing.Entities.Account", b =>
-                {
-                    b.Property<int>("AccountId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("Password")
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("text");
-
-                    b.HasKey("AccountId");
-
-                    b.ToTable("Accounts");
-                });
-
-            modelBuilder.Entity("HighStakes.Storing.Entities.Card", b =>
-                {
-                    b.Property<int>("CardId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Suit")
-                        .HasColumnType("text");
-
-                    b.Property<int>("Value")
-                        .HasColumnType("integer");
-
-                    b.HasKey("CardId");
-
-                    b.ToTable("Cards");
-                });
-
-            modelBuilder.Entity("HighStakes.Storing.Entities.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<int?>("AccountId")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("ChipTotal")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("text");
-
-                    b.HasKey("UserId");
-
-                    b.HasIndex("AccountId");
-
-                    b.ToTable("Users");
-                });
-
             modelBuilder.Entity("HighStakes.Domain.Models.DUser", b =>
                 {
                     b.HasOne("HighStakes.Domain.Models.DAccount", "Account")
-                        .WithMany()
-                        .HasForeignKey("AccountId");
-                });
-
-            modelBuilder.Entity("HighStakes.Storing.Entities.User", b =>
-                {
-                    b.HasOne("HighStakes.Storing.Entities.Account", "Account")
                         .WithMany()
                         .HasForeignKey("AccountId");
                 });
