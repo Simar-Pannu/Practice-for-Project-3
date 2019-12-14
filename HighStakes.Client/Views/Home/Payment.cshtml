@@ -11,9 +11,9 @@
 <div class="text-center" style="background-color:lightgreen; padding: 40px; margin-left:30%; margin-right:30%">
 <form action="/home/table" method="post">
   <div class="form-group">
-    <input type="number" id="UserID" name="buyIn" style="visibility: hidden">
+    <input type="text" id="UserID" name="UserID" style="visibility: hidden">
     <label for="buyIn">Enter the amount</label>
-    <input type="number" class="form-control" id="buyIn" name="buyIn" aria-describedby="emailHelp" placeholder="Amount">
+    <input type="text" class="form-control" id="buyIn" name="buyIn" aria-describedby="emailHelp" placeholder="Amount">
     <small id="chipamount" class="form-text text-muted">Make sure you have money.</small>
   </div>
 
@@ -31,5 +31,5 @@
   }
 </style>
 <script>
-  $('#UserID').val(window.sessionStorage.UserID);
+  $('#UserID').val(Number(window.sessionStorage.UserID));
 </script>

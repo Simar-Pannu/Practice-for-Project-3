@@ -9,12 +9,10 @@ namespace HighStakes.Client.Models
 {
   public class JoinTable
   {
-    [NameAttribute(ErrorMessage = "the name must be letters only")]
-    [StringLength(50)]
     [Required]
     public int userID { get; set; }
     [Required]
-    public int buyInerID { get; set; }
+    public int buyIn { get; set; }
     public DUser user { get; set; }
 
 

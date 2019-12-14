@@ -17,28 +17,28 @@
 <div width="100%">
 <table width="100%" border="0">
           <tbody>
-            <tr>
+            <!-- <tr>
               <td></td>
               <td></td>
               <td>
-                <span id="player5">
+                <span id="player5" class="allusers">
                   <img src="/images/twobackcards.jpg" class="card-size">
                   <div class="speech">cool</div>
                 </span></td>
               <td></td>
               <td></td>
-            </tr>
+            </tr> -->
             <tr>
               <td></td>
               <td>
-                <span id="player6">
+                <span id="player6" class="allusers" style="visibility: hidden;">
                   <img src="/images/twobackcards.jpg" class="card-size">
                   <div class="speech">cool</div>
                  </span></td>
 
               <td></td>
 
-              <td><span id="player4">
+              <td><span id="player4" class="allusers" style="visibility: hidden;">
                   <img src="/images/twobackcards.jpg" class="card-size">
                   <div class="speech">cool</div>
               </span></td></td>
@@ -46,15 +46,15 @@
               <td></td>
             </tr>
             <tr>
-              <td><span id="player7">
+              <td><span id="player7" class="allusers" style="visibility: hidden;">
                   <img src="/images/twobackcards.jpg" class="card-size">
                   <div class="speech">cool</div>
                  </span>
               </td>
 
-              <td></td><td></td><td></td>
+              <td></td><td><span class="bubble" id="pot"></span></td><td></td>
 
-              <td><span id="player3">
+              <td><span id="player3" class="allusers" style="visibility: hidden;">
                   <img src="/images/twobackcards.jpg" class="card-size">
                   <div class="speech">cool</div>
                  </span>
@@ -67,11 +67,15 @@
               <td colspan=9>
                 <div class="text-center" id="dealer_cards">
                 <!-- id="dealer_cards" style="position: fixed; bottom: 50%; width: 100%;"> -->
-                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 6%;width: 6%;">
-                  <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;">
-                  <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;">
-                  <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;">
-                  <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;">
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 6%;width: 6%;" id="flop1">
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 6%;width: 6%;" id="flop2">
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 6%;width: 6%;" id="flop3">
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 6%;width: 6%;" id="flop4">
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 6%;width: 6%;" id="flop5">
+                  <!-- <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;"> -->
+                  <!-- <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;"> -->
+                  <!-- <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;"> -->
+                  <!-- <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;"> -->
                 </div>
               </td>
 
@@ -80,21 +84,76 @@
 
             <tr>
               <td>
-                <span id="player8">
+                <span id="player8" class="allusers">
                   <img src="/images/twobackcards.jpg" class="card-size">
-                  <div class="speech">cool</div>
+                  <div class="bubble" id="user8"></div>
                  </span>
               </td><td></td><td></td><td></td>
 
               <td>
-                <span id="player2">
+                <span id="player2" class="allusers">
                   <img src="/images/twobackcards.jpg" class="card-size">
-                  <div class="bubble">cool</div>
+                  <div class="bubble" id="user2"></div>
               </span>
               </td>
             </tr>
 
+            <tr>
+              <td>
+
+              </td>
+              <td>
+              </td>
+              <td>
+                <span class="bubble" id="user"></span>
+              </td>
+              <td>
+                <span>
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 27%;width: 27%;" id="card1">
+                  <img src="https://opengameart.org/sites/default/files/card%20back%20blue.png" style="height: 27%;width: 27%;" id="card2">
+                </span>
+
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td>
+
+              </td>
+              <td>
+              </td>
+
+              <td colspan="2">
+                <span>
+                  <button id="call" class="btn btn-primary viewbtn" disabled>Call</button>
+                  <button id="check" class="btn btn-primary viewbtn" disabled>Check</button>
+                  <button id="showraise" class="btn btn-primary viewbtn" disabled>Raise</button>
+                  <button id="fold" class="btn btn-primary viewbtn" disabled>Fold</button>
+                  <button id="quit" class="btn btn-primary viewbtn" disabled>Quit</button>
+                </span>
+
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+
+
+              <td colspan="5"><br>
+                <span id="slidecontainer" style="padding: 20px; color: white; visibility: hidden;">
+                  <input type="range" min="1" max="100" value="50" id="slider">
+                  <p>Raise: <span id="demo"></span></p>
+                  <button id="raise">Go</button>
+                </span>
+
+
+              </td>
+            </tr>
+
         </tbody></table></div>
+
+
 
 <!-- <div style="width: 100%">
   <span id="player1">
@@ -143,23 +202,26 @@
 </span> -->
 
 
-<div class="text-center fixed-bottom" id="user">
-  <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 5%;width: 5%;">
-  <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 5%;width: 5%;">
-  <div class="speech">cool</div>
-</div>
+<!-- <div class="text-center fixed-bottom"> -->
+  <!-- <div> -->
+    <!-- <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;" id="card1"> -->
+    <!-- <img src="https://deckofcardsapi.com/static/img/8C.png" style="height: 6%;width: 6%;" id="card2"> -->
+
+    <!-- <div class="bubble" id="user">cool</div> -->
+  <!-- </div> -->
+<!-- </div> -->
 
 
-<h1 id="counter">@Model.Counter</h1>
-<button id="wow" class="btn btn-primary">Hey</button><br>
+<span id="counter"></span>
+<br>
 <span id="cool" style="color: white;"></span>
 <style>
   body {
     background-image: url('/images/casino_table.jpg');
     background-position: center;
-
     height: 100;
   }
+
 </style>
 <script src="/js/table.js">
 

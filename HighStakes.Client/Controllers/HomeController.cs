@@ -8,13 +8,22 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using HighStakes.Client.Models;
 using Newtonsoft.Json;
+using HighStakes.Storing.Repositories;
+using HighStakes.Storing.Entities;
+using HighStakes.Client.Data;
+using HighStakes.Domain.Models;
 // using HighStakes.Storing.Entities;
 
 namespace HighStakes.Client.Controllers
 {
+  // [Produces("application/json")]
+  // [Consumes("application/json")]
+  // [Route("/api/[controller]")]
+  // [ApiController]
   [Route("/[controller]/[action]")]
   public class HomeController : Controller
   {
+
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -28,22 +37,46 @@ namespace HighStakes.Client.Controllers
     }
 
     [HttpPost]
-    public IActionResult Table(Player player)
+    public IActionResult Table(JoinTable newPlayer)
     {
-      Table tableSample;
+      // Table tableOne;
+      // Console.WriteLine("\n");
+      // Console.WriteLine(newPlayer.buyIn);
+      // Console.WriteLine(newPlayer.userID);
+      // Console.WriteLine("\n");
 
-      if (string.IsNullOrEmpty(HttpContext.Session.GetString("table")))
+      Table tableOne = DataTemp.readData();
+
+      if (tableOne == null)
       {
-        tableSample = new Table();
-        tableSample.Counter = 10;
-      } else {
-        tableSample = JsonConvert.DeserializeObject<Table>(HttpContext.Session.GetString("table"));
-        // tableSample.Counter++;
+        tableOne = new Table();
+        tableOne.nextTurn = 0;
+        Console.WriteLine("\nI am  is null\n");
       }
 
-      var jsonString = JsonConvert.SerializeObject(tableSample);
-      HttpContext.Session.SetString("table", jsonString);
-      return View("Table", tableSample);
+
+      if (tableOne.table.NumOfActivePlayers() >= 6)
+      {
+        // room is full
+        return View("Index");
+      }
+      newPlayer.LoadUser();
+      if (tableOne.table.Seats.FirstOrDefault(o => o.Player.UserId == newPlayer.userID) == null)
+      {
+
+        tableOne.table.JoinGame(newPlayer.user, newPlayer.buyIn);
+
+        if (tableOne.table.NumOfActivePlayers() == 2) {
+
+          tableOne.table.StartGame();
+          tableOne.StartRound();
+          // tableOne.subround = 1;
+        }
+      }
+
+      DataTemp.writeData(tableOne);
+
+      return View("Table", tableOne);
     }
 
     public IActionResult Register()
@@ -53,22 +86,28 @@ namespace HighStakes.Client.Controllers
     [HttpPost()]
     public IActionResult Lobby(Player player)
     {
+      if (!ModelState.IsValid)
+      {
+        return View("Index");
+      }
 
-      if (player.firstname == !null) {
+      if (player.firstname != null) {
         player.CreateUser();
       }
 
-      HighStakesContext _hsc = new HighStakesContext();
-      Account account = _hsc.Accounts.FirstOrDefault(o => o.UserName == player.username && o.Password == player.password);
+      // HighStakesContext _hsc = new HighStakesContext();
+      UserRepository.Create();
+      User loginUser = UserRepository.GetUsers().FirstOrDefault(o => o.Account.UserName == player.username && o.Account.Password == player.password);
 
-      if (account == null)
+      if (loginUser == null)
       {
         return RedirectToAction("Index", "Home");
       }
+
       //populate domain user with info
-      player.AccountNum = account.AccountId;
+      player.userID = loginUser.UserId;
       player.LoadUser();
-      ViewData["accountnum"] = account.AccountId;
+      ViewData["userTemp"] = loginUser.UserId;
       return View();
 
     }
@@ -77,29 +116,80 @@ namespace HighStakes.Client.Controllers
     {
       return View();
     }
-
-    [HttpGet("{num}")]
-    public Table Add(string num)
-    {
-      int intFromString;
-      int addTo = 0;
-      if (Int32.TryParse(num, out intFromString))
-      {
-        addTo = intFromString;
-      }
-      var tableSample = JsonConvert.DeserializeObject<Table>(HttpContext.Session.GetString("table"));
-      tableSample.Counter += addTo;
-      var jsonString = JsonConvert.SerializeObject(tableSample);
-      HttpContext.Session.SetString("table", jsonString);
-      return tableSample;
-      // return View("Table");
-    }
     [HttpGet]
-    public Table Add()
+    public string Update()
     {
-      var tableSample = JsonConvert.DeserializeObject<Table>(HttpContext.Session.GetString("table"));
-      return tableSample;
+      return JsonConvert.SerializeObject(DataTemp.readData());
     }
+
+    [HttpGet("{userId}/{bid}")]
+    public string Bid(string userId, string bid)
+    {
+
+      int intUserId;
+      int intBid;
+      if (!Int32.TryParse(userId, out intUserId) || !Int32.TryParse(bid, out intBid))
+      {
+        return null;
+      }
+
+      Table table = DataTemp.readData();
+      DSeat currentSeat = table.table.Seats.FirstOrDefault(o => o.Player.UserId == intUserId);
+      currentSeat.Bid(intBid);
+      table.table.CurrentPot.PotValue += intBid;
+
+      table.incrementTurn();
+
+      DataTemp.writeData(table);
+      return "";
+    }
+    [HttpGet("{userId}/{bid}")]
+    public string Raise(string userId, string bid)
+    {
+      int intUserId;
+      int intBid;
+      if (!Int32.TryParse(userId, out intUserId) || !Int32.TryParse(bid, out intBid))
+      {
+        return null;
+      }
+
+      Table table = DataTemp.readData();
+      DSeat currentSeat = table.seatsOrder.FirstOrDefault(o => o.Player.UserId == intUserId);
+      currentSeat.Bid(intBid);
+      table.HighBid = currentSeat.RoundBid;
+      table.table.CurrentPot.PotValue += intBid;
+
+      table.nextTurn = 1;
+      var indexSeat = table.table.Seats.IndexOf(currentSeat);
+      List<DSeat> reorderedList = new List<DSeat>();
+
+      reorderedList.AddRange(table.seatsOrder.GetRange(indexSeat, table.seatsOrder.Count() - indexSeat));
+      reorderedList.AddRange(table.seatsOrder.GetRange(0, indexSeat));
+      table.seatsOrder = reorderedList;
+
+      DataTemp.writeData(table);
+      return "";
+    }
+
+   [HttpPost]
+
+    public IActionResult PostPokemon(Pokemon poke)
+    {
+      if (ModelState.IsValid)
+      {
+        Console.Write("Out 1: ");
+        Console.WriteLine(poke.name);
+        return View("Index");
+      }
+        Console.Write("Out 2: ");
+        Console.WriteLine(poke.name);
+      return View("Index");
+    }
+
+
+
+
+
 
     public IActionResult Privacy()
     {
