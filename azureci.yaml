@@ -14,7 +14,7 @@ stages:
               dotnet build HighStakes.sln
               docker image pull postgres:alpine
               docker container run -dit --rm --name postgres -p 5432:5432 postgres:alpine
-              dotnet tool install --global dotnet-ef
+              dotnet tool install --global dotnet-ef --version 3.0.0
               dotnet ef migrations add --startup-project HighStakes.Client/HighStakes.Client.csproj --project HighStakes.Storing/HighStakes.Storing.csproj first-migration
   - stage: test
     jobs:
