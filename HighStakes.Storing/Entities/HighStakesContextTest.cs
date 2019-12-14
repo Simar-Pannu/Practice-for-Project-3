@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HighStakes.Storing.Entities
 {
-  public class HighStakesContext : DbContext
+  public class HighStakesContextTest : DbContext
   {
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder dbContext)
     {
-      dbContext.UseNpgsql("server=localhost;database=HighStakes;user id=postgres;password=HighStakes");
+      dbContext.UseInMemoryDatabase("TestDatabase");
     }
 
     public DbSet<DAccount> Account { get; set; }
