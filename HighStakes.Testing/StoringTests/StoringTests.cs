@@ -27,12 +27,7 @@ public void Test_DbContextSpecfic(){
   
   Assert.Equal(Users.First(y=>y.FirstName=="Simar").LastName,"Pannu");
 }
-[Fact]
-public void Test_TestDbContextAddition(){
-  HighStakesContextTest db = new HighStakesContextTest();
-  var Users = db.User;
-  Assert.Equal(Users.First(y=>y.FirstName=="Han").LastName,"Nguyen");
-}
+
 [Fact]
 public void Test_TestDbContextCards(){
   HighStakesContext db = new HighStakesContext();
