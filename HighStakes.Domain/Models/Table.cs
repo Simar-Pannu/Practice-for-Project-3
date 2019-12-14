@@ -17,6 +17,7 @@ namespace HighStakes.Domain.Models
         public void Initialize(int smallBlindAmount, int bigBlindAmount)
         {
             Seats = new List<DSeat>();
+            DeckOfCards = new DDeck(0, new List<DCard>());
             DeckOfCards.Initialize();
             SeatsInTurnOrder = new List<DSeat>();
             SmallBlindAmount = smallBlindAmount;
@@ -62,7 +63,6 @@ namespace HighStakes.Domain.Models
         public bool StartGame()
         {
             int NumberOfPlayers = 0;
-            bool AssignDealer = false;
             bool AssignSmallBlind = false;
             bool AssignBigBlind = false;
             int i = 0;
@@ -75,16 +75,7 @@ namespace HighStakes.Domain.Models
                 {
                     if (Seats[i].Occupied)
                     {
-                        if (!AssignDealer)
-                        {
-                            Seats[i].Dealer = true;
-                            AssignDealer = true;
-                            if (NumberOfPlayers == 2)
-                            {
-                                Seats[i].SmallBlind = true;
-                                AssignSmallBlind = true;
-                            }
-                        } else if (!AssignSmallBlind)
+                        if (!AssignSmallBlind)
                         {
                             Seats[i].SmallBlind = true;
                             AssignSmallBlind = true;
@@ -296,6 +287,7 @@ namespace HighStakes.Domain.Models
             } while (NewPotPeople.Count > 0);  
             // NEED TO ADD MOVING THE SMALL BLIND BIG BLIND
             MoveBlinds();
+            Flop.Clear();
         }
 
         public void MoveBlinds()

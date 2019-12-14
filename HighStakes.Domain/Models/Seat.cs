@@ -13,10 +13,8 @@ namespace HighStakes.Domain.Models
         public DHand PlayerHand { get; set; }
         public bool BigBlind { get; set; }
         public bool SmallBlind { get; set; }
-        public bool Dealer { get; set; }
         public bool Occupied { get; set; }
         public int RoundBid { get; set; }
-        public bool AllIn { get; set; }
         public bool Active { get; set; }
         public int HandValue { get; set; }
 
@@ -28,7 +26,6 @@ namespace HighStakes.Domain.Models
             Flop = new List<DCard>();
             PlayerHand.Initialize();
             Occupied = false;
-            AllIn = false;
             Active = false;
             RoundBid = 0;
             HandValue = 0;
@@ -40,7 +37,6 @@ namespace HighStakes.Domain.Models
             PlayerHand.HandCards.Clear();
             PlayerHand.HandValue = 0;
             Flop.Clear();
-            AllIn = false;
             Active = true;
             RoundBid = 0;
             HandValue = 0;
@@ -52,7 +48,6 @@ namespace HighStakes.Domain.Models
             {
                 RoundBid += ChipTotal;
                 ChipTotal = 0;
-                AllIn = true;
             } else {
                 RoundBid += bid;
                 ChipTotal -= bid;
@@ -84,8 +79,6 @@ namespace HighStakes.Domain.Models
             PlayerHand.Initialize();
             SmallBlind = false;
             BigBlind = false;
-            Dealer = false;
-            AllIn = false;
             Active = false;
             RoundBid = 0;
             HandValue = 0;
