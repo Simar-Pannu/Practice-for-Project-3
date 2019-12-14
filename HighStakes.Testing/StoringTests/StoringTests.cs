@@ -23,9 +23,7 @@ public void Test_DbContext(){
 public void Test_DbContextSpecfic(){
   HighStakesContext db = new HighStakesContext();
   var Users = db.User;
-  
-  
-  Assert.Equal(Users.First(y=>y.FirstName=="Simar").LastName,"Pannu");
+  Assert.True(Users.First(y=>y.FirstName=="Simar").LastName == "Pannu");
 }
 
 [Fact]
@@ -36,6 +34,21 @@ public void Test_TestDbContextCards(){
   Assert.True(cards.Count()==52);
 
 }
+[Fact]
+public void Test_UserRepository(){
+UserRepository ur = new UserRepository();
+var exists = ur.UserExist("Simar","Pannu");
+Assert.True(exists);
+}
+
+
+[Fact]
+public void Test_DeckRepository(){
+DeckRepository dr = new DeckRepository();
+var cards = dr.GetDeck();
+Assert.NotNull(cards.Cards.FirstOrDefault(c=>c.Suit=="Hearts" && c.Value ==11));
+}
+
 
 
 
