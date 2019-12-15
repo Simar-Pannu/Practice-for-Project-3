@@ -7,8 +7,8 @@
   FROM mcr.microsoft.com/dotnet/core/aspnet
   WORKDIR /dist
   EXPOSE 5000
-  # ENV ASPNETCORE_URLS=http://*:5000
-  ENV ASPNETCORE_ENVIRONMENT=development
+  ENV ASPNETCORE_URLS=http://*:5000
+  ENV ASPNETCORE_ENVIRONMENT=Release
   COPY --from=build /aspnet/out .
   RUN ls -a
   CMD ["dotnet", "HighStakes.Client.dll"]
