@@ -237,9 +237,14 @@
     },
     "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Client\\Models\\Table.cs": {
       "HighStakes.Client.Models.Table": {
+        "System.Int32 HighStakes.Client.Models.Table::get_PotValue()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
         "System.Void HighStakes.Client.Models.Table::StartRound()": {
           "Lines": {
-            "23": 0,
             "24": 0,
             "25": 0,
             "26": 0,
@@ -249,11 +254,13 @@
             "30": 0,
             "31": 0,
             "32": 0,
-            "35": 0
+            "33": 0,
+            "34": 0,
+            "36": 0
           },
           "Branches": [
             {
-              "Line": 28,
+              "Line": 29,
               "Offset": 103,
               "EndOffset": 58,
               "Path": 1,
@@ -261,7 +268,7 @@
               "Hits": 0
             },
             {
-              "Line": 28,
+              "Line": 29,
               "Offset": 103,
               "EndOffset": 105,
               "Path": 0,
@@ -272,13 +279,12 @@
         },
         "System.Boolean HighStakes.Client.Models.Table::incrementTurn()": {
           "Lines": {
-            "37": 0,
             "38": 0,
             "39": 0,
             "40": 0,
             "41": 0,
             "42": 0,
-            "44": 0,
+            "43": 0,
             "45": 0,
             "46": 0,
             "47": 0,
@@ -288,11 +294,12 @@
             "51": 0,
             "52": 0,
             "53": 0,
-            "55": 0
+            "54": 0,
+            "56": 0
           },
           "Branches": [
             {
-              "Line": 38,
+              "Line": 39,
               "Offset": 24,
               "EndOffset": 26,
               "Path": 0,
@@ -300,7 +307,7 @@
               "Hits": 0
             },
             {
-              "Line": 38,
+              "Line": 39,
               "Offset": 24,
               "EndOffset": 56,
               "Path": 1,
@@ -308,7 +315,7 @@
               "Hits": 0
             },
             {
-              "Line": 46,
+              "Line": 47,
               "Offset": 82,
               "EndOffset": 84,
               "Path": 0,
@@ -316,7 +323,7 @@
               "Hits": 0
             },
             {
-              "Line": 46,
+              "Line": 47,
               "Offset": 82,
               "EndOffset": 112,
               "Path": 1,
@@ -327,11 +334,11 @@
         },
         "System.Void HighStakes.Client.Models.Table::.ctor()": {
           "Lines": {
-            "16": 0,
             "17": 0,
             "18": 0,
             "19": 0,
-            "20": 0
+            "20": 0,
+            "21": 0
           },
           "Branches": []
         }
@@ -564,6 +571,7 @@
             "137": 0,
             "138": 0,
             "139": 0,
+            "140": 0,
             "142": 0,
             "144": 0,
             "145": 0,
@@ -614,6 +622,7 @@
             "158": 0,
             "159": 0,
             "160": 0,
+            "161": 0,
             "163": 0,
             "164": 0,
             "165": 0,
@@ -6372,6 +6381,175 @@
             "71": 0,
             "72": 0,
             "74": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\tyran\\revature_projects\\project_2c\\HighStakes.Storing\\Entities\\HighStakesContextTest.cs": {
+      "HighStakes.Storing.Entities.HighStakesContextTest": {
+        "System.Void HighStakes.Storing.Entities.HighStakesContextTest::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<HighStakes.Domain.Models.DAccount> HighStakes.Storing.Entities.HighStakesContextTest::get_Account()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<HighStakes.Domain.Models.DCard> HighStakes.Storing.Entities.HighStakesContextTest::get_Card()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<HighStakes.Domain.Models.DUser> HighStakes.Storing.Entities.HighStakesContextTest::get_User()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void HighStakes.Storing.Entities.HighStakesContextTest::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "22": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 8,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 138,
+              "EndOffset": 140,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 138,
+              "EndOffset": 163,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 337,
+              "EndOffset": 339,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 337,
+              "EndOffset": 362,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard> HighStakes.Storing.Entities.HighStakesContextTest::BuildDeck()": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 117,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 106,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 106,
+              "EndOffset": 108,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 117,
+              "EndOffset": 119,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DAccount> HighStakes.Storing.Entities.HighStakesContextTest::BuildAccount()": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<HighStakes.Domain.Models.DUser> HighStakes.Storing.Entities.HighStakesContextTest::BuildUser()": {
+          "Lines": {
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0
           },
           "Branches": []
         }
