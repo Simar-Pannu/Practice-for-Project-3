@@ -9,7 +9,7 @@
   EXPOSE 5000
   EXPOSE 5432
   # ENV ASPNETCORE_URLS=http://*:5000
-  ENV ASPNETCORE_ENVIRONMENT=production
+  ENV ASPNETCORE_ENVIRONMENT=development
   COPY --from=build /aspnet/out .
   RUN ls -a
   CMD ["dotnet", "HighStakes.Client.dll"]
