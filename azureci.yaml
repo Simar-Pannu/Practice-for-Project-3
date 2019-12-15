@@ -27,7 +27,7 @@ stages:
         pool:
           vmImage: ubuntu-18.04
         steps:
-          - script: dotnet test HighStakes.sln --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=**/TestResults/
+          - script: dotnet test HighStakes.sln --logger trx /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=\"cobertura,opencover\"
           - task: PublishCodeCoverageResults@1
             inputs:
               codeCoverageTool: cobertura
