@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HighStakes.Storing.Migrations
 {
     [DbContext(typeof(HighStakesContext))]
-    [Migration("20191214215821_first-migration")]
-    partial class firstmigration
+    [Migration("20191215215527_new-migration")]
+    partial class newmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
