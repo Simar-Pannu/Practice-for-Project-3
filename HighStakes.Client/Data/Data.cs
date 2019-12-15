@@ -4,7 +4,7 @@ namespace HighStakes.Client.Data
 {
   public class DataTemp
   {
-    public static Table table;
+    public static Table table { get; set; }
 
     public static Table readData()
     {
