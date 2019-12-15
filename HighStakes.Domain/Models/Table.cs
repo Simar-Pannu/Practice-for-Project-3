@@ -17,6 +17,7 @@ namespace HighStakes.Domain.Models
         public void Initialize(int smallBlindAmount, int bigBlindAmount)
         {
             Seats = new List<DSeat>();
+            Flop = new List<DCard>();
             DeckOfCards = new DDeck(0, new List<DCard>());
             DeckOfCards.Initialize();
             SeatsInTurnOrder = new List<DSeat>();
@@ -143,6 +144,7 @@ namespace HighStakes.Domain.Models
             {
                 PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
                 MoveBlinds();
+                Flop.Clear();
                 return;
             }
             foreach (DSeat seat in PeopleWhoCanWinMoney)
@@ -164,6 +166,8 @@ namespace HighStakes.Domain.Models
                     if (NewPotPeople.Count == 0)
                     {
                         PeopleWhoCanWinMoney[0].ChipTotal += PotTotal;
+                        MoveBlinds();
+                        Flop.Clear();
                         return;
                     } else {
                         foreach (DSeat seat in NewPotPeople)
