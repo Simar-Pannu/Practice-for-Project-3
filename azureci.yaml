@@ -62,14 +62,14 @@ stages:
         pool:
           vmImage: ubuntu-18.04
         steps:
-          - script: docker image build -f dockerfile -t sspannu/HighStakes:$BUILD_NAME ./3_devops
+          - script: docker image build -f dockerfile -t sspannu/highstakes:$BUILD_NAME .
             env:
               BUILD_NAME: $(Build.DefinitionName)
-          - script: docker login --username $(DOCKER_USER) --password $DOCKER_TOKEN
+          - script: docker login --username $DOCKER_USER --password $DOCKER_TOKEN
             env:
               DOCKER_TOKEN: $(DOCKER_TOKEN)
               DOCKER_USER: $(DOCKER_USER)
-          - script: docker image push sspannu/HighStakes:$BUILD_NAME
+          - script: docker image push sspannu/highstakes:$BUILD_NAME
             env:
               BUILD_NAME: $(Build.DefinitionName)
 
