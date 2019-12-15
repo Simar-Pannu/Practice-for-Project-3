@@ -2622,11 +2622,10 @@
             "407": 2,
             "408": 2,
             "409": 2,
-            "410": 2,
+            "410": 4,
             "411": 4,
             "412": 4,
-            "413": 4,
-            "414": 4
+            "413": 4
           },
           "Branches": [
             {
@@ -2992,7 +2991,7 @@
             {
               "Line": 406,
               "Offset": 2680,
-              "EndOffset": 2694,
+              "EndOffset": 2691,
               "Path": 1,
               "Ordinal": 45,
               "Hits": 4
@@ -3001,13 +3000,13 @@
         },
         "System.Boolean HighStakes.Domain.Models.DSeat::IsPair(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
           "Lines": {
-            "417": 133,
-            "418": 1337,
-            "419": 133
+            "416": 133,
+            "417": 1337,
+            "418": 133
           },
           "Branches": [
             {
-              "Line": 418,
+              "Line": 417,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -3015,7 +3014,7 @@
               "Hits": 1
             },
             {
-              "Line": 418,
+              "Line": 417,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -3023,7 +3022,7 @@
               "Hits": 133
             },
             {
-              "Line": 418,
+              "Line": 417,
               "Offset": 44,
               "EndOffset": 46,
               "Path": 0,
@@ -3031,7 +3030,7 @@
               "Hits": 1
             },
             {
-              "Line": 418,
+              "Line": 417,
               "Offset": 44,
               "EndOffset": 69,
               "Path": 1,
@@ -3042,13 +3041,13 @@
         },
         "System.Boolean HighStakes.Domain.Models.DSeat::IsTwoPair(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
           "Lines": {
-            "422": 62,
-            "423": 626,
-            "424": 62
+            "421": 62,
+            "422": 626,
+            "423": 62
           },
           "Branches": [
             {
-              "Line": 423,
+              "Line": 422,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -3056,7 +3055,7 @@
               "Hits": 1
             },
             {
-              "Line": 423,
+              "Line": 422,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -3064,7 +3063,7 @@
               "Hits": 62
             },
             {
-              "Line": 423,
+              "Line": 422,
               "Offset": 44,
               "EndOffset": 46,
               "Path": 0,
@@ -3072,7 +3071,7 @@
               "Hits": 1
             },
             {
-              "Line": 423,
+              "Line": 422,
               "Offset": 44,
               "EndOffset": 69,
               "Path": 1,
@@ -3083,13 +3082,13 @@
         },
         "System.Boolean HighStakes.Domain.Models.DSeat::IsThreeOfAKind(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
           "Lines": {
-            "427": 108,
-            "428": 1027,
-            "429": 108
+            "426": 108,
+            "427": 1027,
+            "428": 108
           },
           "Branches": [
             {
-              "Line": 428,
+              "Line": 427,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -3097,7 +3096,7 @@
               "Hits": 1
             },
             {
-              "Line": 428,
+              "Line": 427,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -3105,7 +3104,7 @@
               "Hits": 108
             },
             {
-              "Line": 428,
+              "Line": 427,
               "Offset": 44,
               "EndOffset": 46,
               "Path": 0,
@@ -3113,7 +3112,7 @@
               "Hits": 1
             },
             {
-              "Line": 428,
+              "Line": 427,
               "Offset": 44,
               "EndOffset": 69,
               "Path": 1,
@@ -3124,13 +3123,13 @@
         },
         "System.Boolean HighStakes.Domain.Models.DSeat::IsFourOfAKind(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
           "Lines": {
-            "432": 90,
-            "433": 874,
-            "434": 90
+            "431": 90,
+            "432": 874,
+            "433": 90
           },
           "Branches": [
             {
-              "Line": 433,
+              "Line": 432,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -3138,7 +3137,7 @@
               "Hits": 1
             },
             {
-              "Line": 433,
+              "Line": 432,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -3146,7 +3145,7 @@
               "Hits": 90
             },
             {
-              "Line": 433,
+              "Line": 432,
               "Offset": 44,
               "EndOffset": 46,
               "Path": 0,
@@ -3154,7 +3153,7 @@
               "Hits": 1
             },
             {
-              "Line": 433,
+              "Line": 432,
               "Offset": 44,
               "EndOffset": 69,
               "Path": 1,
@@ -3165,13 +3164,13 @@
         },
         "System.Boolean HighStakes.Domain.Models.DSeat::IsFlush(System.Collections.Generic.List`1<HighStakes.Domain.Models.DCard>)": {
           "Lines": {
-            "437": 83,
-            "438": 723,
+            "436": 83,
+            "437": 723,
             "439": 83
           },
           "Branches": [
             {
-              "Line": 438,
+              "Line": 437,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -3179,7 +3178,7 @@
               "Hits": 1
             },
             {
-              "Line": 438,
+              "Line": 437,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -3187,15 +3186,15 @@
               "Hits": 83
             },
             {
-              "Line": 438,
+              "Line": 437,
               "Offset": 44,
               "EndOffset": 46,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 2
             },
             {
-              "Line": 438,
+              "Line": 437,
               "Offset": 44,
               "EndOffset": 69,
               "Path": 1,

@@ -406,7 +406,6 @@ namespace HighStakes.Domain.Models
             if (tempValue > bestValue)
             {
                 BestHand = new List<DCard>(TempHand);
-                bestValue = tempValue;
             }
             AssignHandValue(BestHand);
             PlayerHand.HandCards = new List<DCard>(BestHand);
@@ -415,27 +414,28 @@ namespace HighStakes.Domain.Models
 
         public bool IsPair(List<DCard> hand)
         {
-            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 1;
+            return hand.GroupBy(h => h.Value).Count(g => g.Count() == 2) == 1;
         }
 
         public bool IsTwoPair(List<DCard> hand)
         {
-            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 2).Count() == 2;
+            return hand.GroupBy(h => h.Value).Count(g => g.Count() == 2) == 2;
         }
 
         public bool IsThreeOfAKind(List<DCard> hand)
         {
-            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 3).Any();
+            return hand.GroupBy(h => h.Value).Any(g => g.Count() == 3);
         }
 
         public bool IsFourOfAKind(List<DCard> hand)
         {
-            return hand.GroupBy(h => h.Value).Where(g => g.Count() == 4).Any();
+            return hand.GroupBy(h => h.Value).Any(g => g.Count() == 4);
         }
 
         public bool IsFlush(List<DCard> hand)
         {
             return hand.GroupBy(h => h.Suit).Where(g => g.Count() == 5).Any();
+            //return hand.GroupBy(h => h.Value).Any(g => g.Count() == 5);
         }
 
         public bool IsFullHouse(List<DCard> hand)
