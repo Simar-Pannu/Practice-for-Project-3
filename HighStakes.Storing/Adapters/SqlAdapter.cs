@@ -9,8 +9,8 @@ namespace HighStakes.Storing.Adapters
 
   public class SqlAdapter: ISqlAdapter
   {
-   //  static readonly HighStakesContext _context = new HighStakesContext(null);
-    IHighStakesContext _context;
+   
+    readonly IHighStakesContext _context;
 
     DDeck _Deck {get; set;}
     List<DUser> _Users {get; set;}
@@ -45,7 +45,7 @@ namespace HighStakes.Storing.Adapters
     }
     public List<DUser> BuildUsers(){
      
-    List<DUser> _Users= new List<DUser>();
+    List<DUser> _tempUsers= new List<DUser>();
     List<DAccount> _Accounts = new List<DAccount>();
     foreach (var a in _context.Account)
     {
@@ -53,9 +53,9 @@ namespace HighStakes.Storing.Adapters
     }
         foreach (var u in _context.User)
     {
-       _Users.Add(new DUser(){UserId= u.UserId,FirstName =u.FirstName, LastName =u.LastName, ChipTotal= u.ChipTotal, AccountId = u.AccountId});
+       _tempUsers.Add(new DUser(){UserId= u.UserId,FirstName =u.FirstName, LastName =u.LastName, ChipTotal= u.ChipTotal, AccountId = u.AccountId});
     }
-    foreach (var user in _Users)
+    foreach (var user in _tempUsers)
     {
         foreach (var account in _Accounts)
         {
@@ -63,7 +63,7 @@ namespace HighStakes.Storing.Adapters
         }
     }
     
-    return _Users;
+    return _tempUsers;
   }
   public void addUser(DUser user){
     _Users.Add(user);

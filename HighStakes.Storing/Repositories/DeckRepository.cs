@@ -6,7 +6,7 @@ namespace HighStakes.Storing.Repositories
   public class DeckRepository
   {
  
-    DDeck _Deck;
+    readonly DDeck _Deck;
 
     public DDeck GetDeck() { return _Deck; }
     public DeckRepository()

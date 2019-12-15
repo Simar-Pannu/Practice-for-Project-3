@@ -6,8 +6,8 @@ namespace HighStakes.Storing.Repositories
 {
   public class UserRepository
   {
-    List<DUser> _Users;
-    ISqlAdapter sa;
+    readonly List<DUser> _Users;
+    readonly ISqlAdapter sa;
     public DUser GetUser(int id) { return _Users.Find(x=>x.UserId == id);}
     public List<DUser> GetUsers(){return sa.getUsers();}
     public UserRepository()
