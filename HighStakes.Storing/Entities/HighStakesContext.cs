@@ -12,7 +12,7 @@ namespace HighStakes.Storing.Entities
 
     protected override void OnConfiguring(DbContextOptionsBuilder dbContext)
     {
-      dbContext.UseNpgsql("server=127.0.0.1:5432;database=HighStakes;user id=postgres;password=HighStakes");
+      dbContext.UseNpgsql("server=localhost:5432;database=HighStakes;user id=postgres;password=HighStakes");
     }
 
     public DbSet<DAccount> Account { get; set; }
