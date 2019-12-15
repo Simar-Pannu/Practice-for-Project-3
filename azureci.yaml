@@ -27,7 +27,7 @@ stages:
         pool:
           vmImage: ubuntu-18.04
         steps:
-          - script: dotnet test HighStakes.sln --logger trx --collect:"XPlat Code Coverage"
+          - script: dotnet test HighStakes.sln --logger trx -p:CollectCoverage=true
           - task: PublishCodeCoverageResults@1
             inputs:
               codeCoverageTool: opencover
