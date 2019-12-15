@@ -30,8 +30,8 @@ stages:
           - script: dotnet test HighStakes.sln --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           - task: PublishCodeCoverageResults@1
             inputs:
-              codeCoverageTool: opencover
-              summaryFileLocation: '**/coverage.opencover.xml'
+              codeCoverageTool: cobertura
+              summaryFileLocation: '**/coverage.cobertura.xml'
   - stage: analyze
     jobs:
       - job:
