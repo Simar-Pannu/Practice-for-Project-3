@@ -434,8 +434,7 @@ namespace HighStakes.Domain.Models
 
         public bool IsFlush(List<DCard> hand)
         {
-            return hand.GroupBy(h => h.Suit).Where(g => g.Count() == 5).Any();
-            //return hand.GroupBy(h => h.Value).Any(g => g.Count() == 5);
+            return hand.GroupBy(h => h.Suit).Any(g => g.Count() == 5);
         }
 
         public bool IsFullHouse(List<DCard> hand)

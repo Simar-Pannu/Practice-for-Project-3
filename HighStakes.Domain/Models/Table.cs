@@ -80,7 +80,9 @@ namespace HighStakes.Domain.Models
                         {
                             Seats[i].SmallBlind = true;
                             AssignSmallBlind = true;
-                        } else if (!AssignBigBlind)
+                            continue;
+                        } 
+                        if (!AssignBigBlind)
                         {
                             Seats[i].BigBlind = true;
                             AssignBigBlind = true;
@@ -121,7 +123,6 @@ namespace HighStakes.Domain.Models
         {
             int PotTotal = 0;
             int NewPot = 0;
-            DSeat winningSeat = new DSeat();
             List<DSeat> PeopleWhoCanWinMoney = new List<DSeat>();
             List<DSeat> NewPotPeople = new List<DSeat>();
             List<DSeat> MatchingHandValues = new List<DSeat>();
@@ -309,14 +310,7 @@ namespace HighStakes.Domain.Models
                 SeatsInTurnOrder[0].SmallBlind = false;
                 SeatsInTurnOrder[1].BigBlind = false;
                 SeatsInTurnOrder[1].SmallBlind = true;
-            } else {
-                EndGame();
             }
-        }
-
-        public void EndGame()
-        {
-
         }
 
         public void StartRound()
