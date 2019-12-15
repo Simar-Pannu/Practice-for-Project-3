@@ -9,39 +9,51 @@ using Microsoft.EntityFrameworkCore;
 namespace HighStakes.Storing.Adapters
 {
 
-  public class SqlAdapter
+  public class SqlAdapter: ISqlAdapter
   {
-     static readonly HighStakesContext db = new HighStakesContext();
-    
-    DDeck _Deck;
-    List<DUser> _Users = new List<DUser>();
+   //  static readonly HighStakesContext _context = new HighStakesContext(null);
+    IHighStakesContext _context;
+
+    DDeck _Deck {get; set;}
+    List<DUser> _Users {get; set;}
     public DDeck getDeck() { return _Deck;}
-    public List<DUser> getUsers() {return _Users;}
+    public List<DUser> getUsers() {return BuildUsers();}
 
     public SqlAdapter(){
+      HighStakesContext db =new HighStakesContext();
+    _context = db;
     _Deck = BuildDeck();
     _Users = BuildUsers();
     }
+    public SqlAdapter(int i){
+     
+   HighStakesContextTest db = new HighStakesContextTest(); // _context.
+   db.Database.EnsureCreated();
+   _context = db;
+   _Deck = BuildDeck();
+   _Users = BuildUsers();
+    }
+    
 
     public DDeck BuildDeck(){
 
       List<DCard> cards = new List<DCard>();
-      foreach (var card in db.Card)
+      foreach (var card in _context.Card)
       {
           cards.Add(card);
       }
-   //   db.Dispose
+   //   _context.Dispose
       return new DDeck(0, cards);
     }
     public List<DUser> BuildUsers(){
      
     List<DUser> _Users= new List<DUser>();
     List<DAccount> _Accounts = new List<DAccount>();
-    foreach (var a in db.Account)
+    foreach (var a in _context.Account)
     {
         _Accounts.Add(new DAccount(){AccountId=a.AccountId,UserName=a.UserName,Password=a.Password});
     }
-        foreach (var u in db.User)
+        foreach (var u in _context.User)
     {
        _Users.Add(new DUser(){UserId= u.UserId,FirstName =u.FirstName, LastName =u.LastName, ChipTotal= u.ChipTotal, AccountId = u.AccountId});
     }
@@ -56,14 +68,18 @@ namespace HighStakes.Storing.Adapters
     return _Users;
   }
   public void addUser(DUser user){
-
-    db.User.Add(user);
-    db.SaveChanges();
+    _Users.Add(user);
+    var u = new DUser(){FirstName = user.FirstName, LastName = user.LastName, ChipTotal = user.ChipTotal};
+    var a = new DAccount(){UserName = user.Account.UserName, Password = user.Account.Password};
+    _context.Account.Add(a);
+    u.AccountId = a.AccountId;
+    _context.User.Add(u);
+    _context.SaveChanges();
   }
   public void UpdateChips(int UserId, int Chips){
-
-   db.User.First(x=>x.UserId==UserId).ChipTotal = Chips;
-    db.SaveChanges();
+    _Users.First(x=>x.UserId==UserId).ChipTotal = Chips;
+   _context.User.First(x=>x.UserId==UserId).ChipTotal = Chips;
+    _context.SaveChanges();
   }
   
 

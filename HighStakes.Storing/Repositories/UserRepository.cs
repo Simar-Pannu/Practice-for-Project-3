@@ -8,14 +8,21 @@ namespace HighStakes.Storing.Repositories
   public class UserRepository
   {
     List<DUser> _Users;
-    SqlAdapter sa = new SqlAdapter();
+    ISqlAdapter sa;
     public DUser GetUser(int id) { return _Users.Find(x=>x.UserId == id);}
-    public List<DUser> GetUsers(){return _Users;}
+    public List<DUser> GetUsers(){return sa.getUsers();}
     public UserRepository()
     {
+      sa = new SqlAdapter();
+      _Users = sa.getUsers();
+    }
+        public UserRepository(int i)
+    {
+      sa = new SqlAdapter(i);
       _Users = sa.getUsers();
     }
     public void UpdateChipTotal(int UserId, int Chips){
+      _Users.Find(x=>x.UserId==UserId).ChipTotal = Chips;
       sa.UpdateChips(UserId, Chips);
      
     }
