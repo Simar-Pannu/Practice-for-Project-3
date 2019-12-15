@@ -27,11 +27,11 @@ stages:
         pool:
           vmImage: ubuntu-18.04
         steps:
-          - script: dotnet test HighStakes.sln --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+          - script: dotnet test HighStakes.sln --logger trx --collect:"XPlat Code Coverage"
           - task: PublishCodeCoverageResults@1
             inputs:
-              codeCoverageTool: opencover
-              summaryFileLocation: '**/coverage.opencover.xml'
+              codeCoverageTool: cobertura
+              summaryFileLocation: '**/coverage.cobertura.xml'
   - stage: analyze
     jobs:
       - job:
@@ -50,7 +50,7 @@ stages:
               /d:sonar.host.url=https://sonarcloud.io/ \
               /d:sonar.login=$SONAR_TOKEN \
               /d:sonar.exclusions=**/wwwroot/lib/**,HighStakes.Client/*.cs \
-              /d:sonar.cs.opencover.reportsPaths=**/TestResults/*/coverage.opencover.xml \
+              /d:sonar.cs.cobertura.reportsPaths=**/TestResults/*/coverage.cobertura.xml \
               /d:sonar.cs.vstest.reportsPaths=**/*.trx
               dotnet build HighStakes.sln
               dotnet test HighStakes.sln --logger trx
