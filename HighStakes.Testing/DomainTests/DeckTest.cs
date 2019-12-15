@@ -10,10 +10,11 @@ namespace HighStakes.Testing.DomainTests
         public void Test_Initialize()
         {
             var deck = new DDeck(0, new List<DCard>());
+            var expected = 52;
 
             deck.Initialize();
 
-            Assert.True(deck.Cards.Count == 52);
+            Assert.Equal(expected, deck.Cards.Count);
         }
 
         [Fact]
@@ -39,7 +40,7 @@ namespace HighStakes.Testing.DomainTests
 
             deck.Shuffle();
 
-            // Assert.False(card1.Equals(deck.Cards[0]))
+            Assert.False(card1.Equals(deck.Cards[0].Name) && card1.Equals(deck.Cards[1].Name) && card1.Equals(deck.Cards[2].Name));
         }
     }
 }
