@@ -1,6 +1,5 @@
 using HighStakes.Domain.Models;
 using System.Collections.Generic;
-using HighStakes.Storing.Entities;
 using HighStakes.Storing.Adapters;
 
 namespace HighStakes.Storing.Repositories
