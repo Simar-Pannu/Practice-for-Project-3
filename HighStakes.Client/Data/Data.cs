@@ -2,7 +2,7 @@ using HighStakes.Client.Models;
 
 namespace HighStakes.Client.Data
 {
-  public class DataTemp
+  public static class DataTemp
   {
     public static Table table { get; set; }
 
