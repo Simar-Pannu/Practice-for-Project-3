@@ -49,6 +49,7 @@ stages:
               /d:sonar.host.url=https://sonarcloud.io/ \
               /d:sonar.cs.opencover.reportsPaths=**/TestResults/*/coverage.opencover.xml \
               /d:sonar.cs.vstest.reportsPaths=**/*.trx \
+              /d:sonar.coverage.exclusions=**/wwwroot/lib \
               /k:Practice-for-Project-3 \
               /o:simar-pannu \
               dotnet build HighStakes.sln

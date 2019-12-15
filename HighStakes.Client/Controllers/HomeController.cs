@@ -149,7 +149,7 @@ namespace HighStakes.Client.Controllers
       var indexSeat = table.table.Seats.IndexOf(currentSeat);
       List<DSeat> reorderedList = new List<DSeat>();
 
-      reorderedList.AddRange(table.seatsOrder.GetRange(indexSeat, table.seatsOrder.Count() - indexSeat));
+      reorderedList.AddRange(table.seatsOrder.GetRange(indexSeat, table.seatsOrder.Count - indexSeat));
       reorderedList.AddRange(table.seatsOrder.GetRange(0, indexSeat));
       table.seatsOrder = reorderedList;
 

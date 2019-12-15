@@ -7,11 +7,11 @@ namespace HighStakes.Client.Models
   [Serializable]
   public class Table
   {
-    public DTable table;
-    public int nextTurn;
-    public int HighBid;
-    public int subround;
-    public List<DSeat> seatsOrder;
+    public DTable table { get; set; }
+    public int nextTurn { get; set; }
+    public int HighBid { get; set; }
+    public int subround { get; set; }
+    public List<DSeat> seatsOrder { get; set; }
     public int PotValue { get; set; }
 
     public Table()
