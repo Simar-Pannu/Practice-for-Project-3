@@ -3,7 +3,6 @@ using HighStakes.Domain.Models;
 using HighStakes.Storing.Adapters;
 using HighStakes.Storing.Entities;
 using HighStakes.Storing.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace HighStakes.Testing.StoringTests
