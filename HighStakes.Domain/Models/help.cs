@@ -1,4 +1,0 @@
-namespace HighStakes.Domain.Models
-{
-    
-}

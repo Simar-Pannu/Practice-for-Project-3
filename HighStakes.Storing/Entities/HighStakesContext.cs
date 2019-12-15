@@ -12,7 +12,7 @@ namespace HighStakes.Storing.Entities
 
     protected override void OnConfiguring(DbContextOptionsBuilder dbContext)
     {
-      dbContext.UseNpgsql("server=localhost:5432;database=HighStakes;user id=postgres;password=HighStakes");
+      dbContext.UseNpgsql("server=127.0.0.1:5432;database=HighStakes;user id=postgres;password=HighStakes");
     }
 
     public DbSet<DAccount> Account { get; set; }
@@ -29,7 +29,7 @@ namespace HighStakes.Storing.Entities
       modelBuilder.Entity<DCard>().HasData(BuildDeck());
 
 
-      
+
 
       modelBuilder.Entity<DUser>(o => o.HasKey(k => k.UserId));
       modelBuilder.Entity<DUser>().Property(p => p.UserId).UseSerialColumn();
@@ -54,7 +54,7 @@ namespace HighStakes.Storing.Entities
         }
       }
       return cards;
-      
+
     }
     public List<DAccount> BuildAccount()
     {
