@@ -2,24 +2,18 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using HighStakes.Client.Models;
 using Newtonsoft.Json;
 using HighStakes.Storing.Repositories;
-using HighStakes.Storing.Entities;
 using HighStakes.Client.Data;
 using HighStakes.Domain.Models;
-// using HighStakes.Storing.Entities;
 
 namespace HighStakes.Client.Controllers
 {
-  // [Produces("application/json")]
-  // [Consumes("application/json")]
-  // [Route("/api/[controller]")]
-  // [ApiController]
+
   [Route("/[controller]/[action]")]
   public class HomeController : Controller
   {
@@ -39,11 +33,6 @@ namespace HighStakes.Client.Controllers
     [HttpPost]
     public IActionResult Table(JoinTable newPlayer)
     {
-      // Table tableOne;
-      // Console.WriteLine("\n");
-      // Console.WriteLine(newPlayer.buyIn);
-      // Console.WriteLine(newPlayer.userID);
-      // Console.WriteLine("\n");
 
       Table tableOne = DataTemp.readData();
 
@@ -51,7 +40,6 @@ namespace HighStakes.Client.Controllers
       {
         tableOne = new Table();
         tableOne.nextTurn = 0;
-        Console.WriteLine("\nI am  is null\n");
       }
 
 
@@ -70,7 +58,6 @@ namespace HighStakes.Client.Controllers
 
           tableOne.table.StartGame();
           tableOne.StartRound();
-          // tableOne.subround = 1;
         }
       }
 
@@ -95,8 +82,6 @@ namespace HighStakes.Client.Controllers
         player.CreateUser();
       }
 
-      // HighStakesContext _hsc = new HighStakesContext();
-      // UserRepository.Create();
       UserRepository _ur = new UserRepository();
       DUser loginUser = _ur.GetUsers().FirstOrDefault(o => o.Account.UserName == player.username && o.Account.Password == player.password);
 
