@@ -27,16 +27,16 @@ stages:
         pool:
           vmImage: ubuntu-18.04
         steps:
-          - script: dotnet test HighStakes.sln --logger trx --collect:"XPlat Code Coverage"
+          - script: dotnet test HighStakes.sln --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           - task: PublishCodeCoverageResults@1
             inputs:
-              codeCoverageTool: cobertura
-              summaryFileLocation: '**/coverage.cobertura.xml'
+              codeCoverageTool: opencover
+              summaryFileLocation: '**/coverage.opencover.xml'
   - stage: analyze
     jobs:
       - job:
         pool:
-          vmImage: ubuntu-18.04
+          wmImage: ubuntu-18.04
         steps:
           - task: UseDotNet@2
             inputs:
@@ -45,12 +45,12 @@ stages:
           - script: dotnet tool install --global dotnet-sonarscanner
           - script: |
               dotnet sonarscanner begin \
-              /d:sonar.login=$SONAR_TOKEN \
-              /d:sonar.host.url=https://sonarcloud.io/ \
-              /d:sonar.cs.opencover.reportsPaths=**/TestResults/*/coverage.opencover.xml \
-              /d:sonar.cs.vstest.reportsPaths=**/*.trx \
-              /k:practice-for-project-3 \
+              /k:Practice-for-Project-3 \
               /o:simar-pannu \
+              /d:sonar.host.url=https://sonarcloud.io/ \
+              /d:sonar.login=$SONAR_TOKEN \
+              /d:sonar.cs.opencover.reportsPaths=**/TestResults/*/coverage.opencover.xml \
+              /d:sonar.cs.vstest.reportsPaths=**/*.trx
               dotnet build HighStakes.sln
               dotnet test HighStakes.sln --logger trx
               dotnet sonarscanner end /d:sonar.login=$SONAR_TOKEN
