@@ -16,11 +16,11 @@ stages:
               version: '3.1.100'
           - script: |
               dotnet build HighStakes.sln
-              docker image pull postgres:alpine
-              docker container run -dit --rm --name postgres -p 5432:5432 postgres:alpine
-              dotnet tool install --global dotnet-ef --version 3.0.0
-              dotnet ef migrations add --startup-project HighStakes.Client/HighStakes.Client.csproj --project HighStakes.Storing/HighStakes.Storing.csproj pipeline-migration
-              dotnet ef database update -s HighStakes.Client/HighStakes.Client.csproj -p HighStakes.Storing/HighStakes.Storing.csproj 
+              # docker image pull postgres:alpine
+              # docker container run -dit --rm --name postgres -p 5432:5432 postgres:alpine
+              # dotnet tool install --global dotnet-ef --version 3.0.0
+              # dotnet ef migrations add --startup-project HighStakes.Client/HighStakes.Client.csproj --project HighStakes.Storing/HighStakes.Storing.csproj pipeline-migration
+              # dotnet ef database update -s HighStakes.Client/HighStakes.Client.csproj -p HighStakes.Storing/HighStakes.Storing.csproj 
   - stage: test
     jobs:
       - job: aspnet_test

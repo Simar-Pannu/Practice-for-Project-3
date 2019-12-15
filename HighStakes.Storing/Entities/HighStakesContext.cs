@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HighStakes.Storing.Entities
 {
-  public class HighStakesContext : DbContext
+  public class HighStakesContext : DbContext, IHighStakesContext
   {
 
 

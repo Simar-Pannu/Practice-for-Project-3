@@ -12,7 +12,7 @@ namespace HighStakes.Storing.Adapters
   public class SqlAdapter
   {
      static readonly HighStakesContext db = new HighStakesContext();
-
+    
     DDeck _Deck;
     List<DUser> _Users = new List<DUser>();
     public DDeck getDeck() { return _Deck;}
