@@ -51,7 +51,7 @@ stages:
               /d:sonar.login=$SONAR_TOKEN \
               /d:sonar.cs.opencover.reportsPaths=**/TestResults/*/coverage.opencover.xml \
               /d:sonar.cs.vstest.reportsPaths=**/*.trx \
-              /d:sonar.coverage.exclusions=**/wwwroot/lib \
+              /d:sonar.exclusions=**/wwwroot/lib/*.js \
               dotnet build HighStakes.sln
               dotnet test HighStakes.sln --logger trx
               dotnet sonarscanner end /d:sonar.login=$SONAR_TOKEN
