@@ -3,7 +3,6 @@
 
 // Write your JavaScript code.
 
-https://deckofcardsapi.com/static/img/8C.png
 
 function cardImage(pocket) {
   var url = 'https://deckofcardsapi.com/static/img/';
@@ -27,13 +26,6 @@ function cardImage(pocket) {
   return url + file + '.png';
 }
 
-function flipOne() {
-  var refreshPage = "http://localhost:5000/Home/Update";
-  $.getJSON(refreshPage, (data) => {
-    var flopCards = 0;
-
-  });
-}
 
 function GetSuit(suit) {
   if (suit == 'Heart') {
@@ -102,7 +94,7 @@ function call() {
         var callAmount = data.HighBid - element.RoundBid;
 
         url_bid = url_bid + sessionStorage.UserID + "/" + callAmount;
-        $.getJSON(url_bid, (data) => { });
+        $.getJSON(url_bid, (data_1) => { });
       }
     });
   });
@@ -172,7 +164,7 @@ function anotherFunction() {
               currentUser = $('#user2');
               userBox = $('#player2');
 
-            } else if (numberSeat == 1) {
+            } else (numberSeat == 1) {
               currentUser = $('#user8');
               userBox = $('#player8');
 
