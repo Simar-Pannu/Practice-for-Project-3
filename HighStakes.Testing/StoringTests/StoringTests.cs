@@ -43,14 +43,7 @@ public void Test_ContextSwitchingInSqlAdapter(){
   Assert.True(sa.getDeck().Cards.Count()==52);
 }
 
-[Fact]
-public void Test_AddingUsersSqlAdapter(){
-  SqlAdapter sa = new SqlAdapter(1);
 
-  sa.addUser(new DUser(){FirstName = "Test", LastName = "Test"});
-  
-  Assert.NotNull(sa.getUsers().FirstOrDefault(x=>x.FirstName=="Test"));
-}
 
 [Theory]
 [InlineData(1, 100)]
