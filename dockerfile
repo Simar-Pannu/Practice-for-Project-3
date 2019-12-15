@@ -1,4 +1,4 @@
-  FROM mcr.microsoft.com/dotnet/core/sdk as build 
+  FROM mcr.microsoft.com/dotnet/core/sdk as build
   WORKDIR /aspnet
   COPY . .
   RUN dotnet build
@@ -8,6 +8,7 @@
   WORKDIR /dist
   EXPOSE 5000
   # ENV ASPNETCORE_URLS=http://*:5000
+  ENV ASPNETCORE_ENVIRONMENT=development
   COPY --from=build /aspnet/out .
   RUN ls -a
   CMD ["dotnet", "HighStakes.Client.dll"]
