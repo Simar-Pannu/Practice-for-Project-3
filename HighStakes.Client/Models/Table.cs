@@ -12,6 +12,7 @@ namespace HighStakes.Client.Models
     public int HighBid;
     public int subround;
     public List<DSeat> seatsOrder;
+    public int PotValue { get; set; }
 
     public Table()
     {
@@ -30,7 +31,7 @@ namespace HighStakes.Client.Models
         this.table.Flop.Add(this.table.DeckOfCards.Draw());
       }
       this.seatsOrder = this.table.SeatsInTurnOrder;
-      this.table.CurrentPot.PotValue = 0;
+      this.PotValue = 0;
 
     }
     public bool incrementTurn()

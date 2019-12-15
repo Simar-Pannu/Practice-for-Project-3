@@ -119,7 +119,7 @@ function anotherFunction() {
       // console.log(data.table.Seats.Pocket);
       var dataNum = data.subround;
 
-      $('#pot').html("Pot: " + data.table.CurrentPot.PotValue);
+      $('#pot').html("Pot: " + data.PotValue);
 
       if (dataNum > 0)
       {

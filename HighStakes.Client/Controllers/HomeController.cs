@@ -137,7 +137,7 @@ namespace HighStakes.Client.Controllers
       Table table = DataTemp.readData();
       DSeat currentSeat = table.table.Seats.FirstOrDefault(o => o.Player.UserId == intUserId);
       currentSeat.Bid(intBid);
-      table.table.CurrentPot.PotValue += intBid;
+      table.PotValue += intBid;
 
       table.incrementTurn();
 
@@ -158,7 +158,7 @@ namespace HighStakes.Client.Controllers
       DSeat currentSeat = table.seatsOrder.FirstOrDefault(o => o.Player.UserId == intUserId);
       currentSeat.Bid(intBid);
       table.HighBid = currentSeat.RoundBid;
-      table.table.CurrentPot.PotValue += intBid;
+      table.PotValue += intBid;
 
       table.nextTurn = 1;
       var indexSeat = table.table.Seats.IndexOf(currentSeat);
