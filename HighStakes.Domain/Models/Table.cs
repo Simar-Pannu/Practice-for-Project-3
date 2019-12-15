@@ -121,7 +121,6 @@ namespace HighStakes.Domain.Models
         {
             int PotTotal = 0;
             int NewPot = 0;
-            DSeat winningSeat = new DSeat();
             List<DSeat> PeopleWhoCanWinMoney = new List<DSeat>();
             List<DSeat> NewPotPeople = new List<DSeat>();
             List<DSeat> MatchingHandValues = new List<DSeat>();
