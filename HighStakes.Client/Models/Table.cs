@@ -7,11 +7,12 @@ namespace HighStakes.Client.Models
   [Serializable]
   public class Table
   {
-    public DTable table;
-    public int nextTurn;
-    public int HighBid;
-    public int subround;
-    public List<DSeat> seatsOrder;
+    public DTable table { get; set; }
+    public int nextTurn { get; set; }
+    public int HighBid { get; set; }
+    public int subround { get; set; }
+    public List<DSeat> seatsOrder { get; set; }
+    public int PotValue { get; set; }
 
     public Table()
     {
@@ -30,7 +31,7 @@ namespace HighStakes.Client.Models
         this.table.Flop.Add(this.table.DeckOfCards.Draw());
       }
       this.seatsOrder = this.table.SeatsInTurnOrder;
-      this.table.CurrentPot.PotValue = 0;
+      this.PotValue = 0;
 
     }
     public bool incrementTurn()
@@ -44,9 +45,10 @@ namespace HighStakes.Client.Models
       {
         this.subround++;
         if (this.subround == 4) {
+
+          this.subround = 0;
           table.EndRound();
           StartRound();
-          this.subround = 0;
         }
         Console.WriteLine("From Turn false");
         nextTurn = 0;
