@@ -31,7 +31,7 @@ namespace HighStakes.Client.Models
         this.table.Flop.Add(this.table.DeckOfCards.Draw());
       }
       this.seatsOrder = this.table.SeatsInTurnOrder;
-      this.PotValue = 0;
+      this.PotValue = 30;
 
     }
     public bool incrementTurn()

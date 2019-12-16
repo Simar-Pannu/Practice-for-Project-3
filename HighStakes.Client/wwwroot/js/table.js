@@ -113,6 +113,8 @@ function anotherFunction() {
 
       $('#pot').html("Pot: " + data.PotValue);
 
+      $('.flops').attr("src", "https://opengameart.org/sites/default/files/card%20back%20blue.png");
+
       if (dataNum > 0)
       {
         $('#flop1').attr("src", cardImage(data.table.Flop[0]));
