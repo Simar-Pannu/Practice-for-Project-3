@@ -45,6 +45,7 @@ namespace HighStakes.Client.Models
       {
         this.subround++;
         if (this.subround == 4) {
+
           this.subround = 0;
           table.EndRound();
           StartRound();
