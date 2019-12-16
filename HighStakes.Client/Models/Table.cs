@@ -45,9 +45,9 @@ namespace HighStakes.Client.Models
       {
         this.subround++;
         if (this.subround == 4) {
+          this.subround = 0;
           table.EndRound();
           StartRound();
-          this.subround = 0;
         }
         Console.WriteLine("From Turn false");
         nextTurn = 0;
