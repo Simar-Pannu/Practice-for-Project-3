@@ -47,6 +47,11 @@ namespace HighStakes.Client.Models
         if (this.subround == 4) {
 
           this.subround = 0;
+          foreach (var seat in this.table.SeatsInTurnOrder)
+          {
+            seat.Flop.AddRange(this.table.Flop);
+          }
+
           table.EndRound();
           StartRound();
         }
