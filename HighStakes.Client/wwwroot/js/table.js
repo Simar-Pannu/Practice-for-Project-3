@@ -164,7 +164,7 @@ function anotherFunction() {
               currentUser = $('#user2');
               userBox = $('#player2');
 
-            } else (numberSeat == 1) {
+            } else {
               currentUser = $('#user8');
               userBox = $('#player8');
 

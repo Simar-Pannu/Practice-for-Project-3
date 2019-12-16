@@ -12,13 +12,9 @@ namespace HighStakes.Storing.Entities
 
     protected override void OnConfiguring(DbContextOptionsBuilder dbContext)
     {
-      
-   
       dbContext.UseNpgsql("server=172.17.0.2;database=HighStakes;user id=postgres;password=HighStakes");
-      
-      
     }
-            
+
     public DbSet<DAccount> Account { get; set; }
     public DbSet<DCard> Card { get; set; }
     public DbSet<DUser> User { get; set; }
