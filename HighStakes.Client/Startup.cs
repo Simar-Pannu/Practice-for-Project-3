@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HighStakes.Storing.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +29,8 @@ namespace HighStakes.Client
             services.AddMvc(o => o.EnableEndpointRouting = false);
             services.AddDistributedMemoryCache();
             services.AddSession();
+            services.AddDbContext<HighStakesContext>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +48,8 @@ namespace HighStakes.Client
             }
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
+            HighStakesContext db = new HighStakesContext();
+            db.Database.Migrate();
 
             // app.UseRouting();
 
